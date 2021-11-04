@@ -1,0 +1,6 @@
+2016-03-18 17:00:40,063 [ModalContext] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 8
+2016-03-18 17:00:41,463 [New I/O client worker #1-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://maven.atlassian.com/public/com/atlassian/maven/archetypes/confluence-plugin-archetype/maven-metadata.xml
+2016-03-18 17:00:41,483 [New I/O client worker #1-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.atlassian.com/public/com/atlassian/maven/archetypes/confluence-plugin-archetype/maven-metadata.xml
+2016-03-18 17:00:41,783 [ModalContext] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 8
+2016-03-18 17:00:42,863 [New I/O client worker #2-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://maven.atlassian.com/public/com/atlassian/maven/archetypes/confluence-plugin-archetype/6.2.3/confluence-plugin-archetype-6.2.3.jar
+2016-03-18 17:00:42,873 [New I/O client worker #2-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.atlassian.com/public/com/atlassian/maven/archetypes/confluence-plugin-archetype/6.2.3/confluence-plugin-archetype-6.2.3.jar

@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="./tempInterno.xhtml"
+                xmlns:f="http://java.sun.com/jsf/core">
+ 
+    <ui:define name="deck">
+        <h:panelGroup class="semBorda" >
+            <p:panelGrid  style="width: 100%;" columns="1" id="painel">
+                <f:facet name="header">  
+                    <h3>Cadastro de Produto(s)</h3>
+                </f:facet>
+            </p:panelGrid>
+        </h:panelGroup>
+    </ui:define>
+    <ui:define name="acao">
+           <script>  
+            function mascara(o, f) {  
+              v_obj = o;  
+              v_fun = f;  
+              setTimeout("execmascara()", 1);  
+            }  
+  
+            function execmascara() {  
+              v_obj.value = v_fun(v_obj.value);  
+            }  
+  
+         function valor(v) {  
+        v = v.replace(/\D/g, "");  
+        v = v.replace(/[0-9]{15}/, "inválido");  
+        v = v.replace(/(\d{1})(\d{11})$/, "$1.$2"); // coloca ponto antes dos  
+        // Ãºltimos 11 digitos  
+        v = v.replace(/(\d{1})(\d{8})$/, "$1.$2"); // coloca ponto antes dos  
+        // Ãºltimos 8 digitos  
+        v = v.replace(/(\d{1})(\d{5})$/, "$1.$2"); // coloca ponto antes dos  
+        // Ãºltimos 5 digitos  
+        v = v.replace(/(\d{1})(\d{1,2})$/, "$1,$2"); // coloca virgula antes dos  
+        // Ãºltimos 2 digitos  
+        return v;  
+}  
+  
+                    </script>  
+        <h:panelGrid columns="2">
+            * Código: 
+            <p:inputText label="codigo" value="#{produtoMB.produto.prodCodigo}" required="false" readonly="true">
+                <f:convertNumber />
+            </p:inputText>
+            * Referência: <p:inputText label="referencia" value="#{produtoMB.produto.prodReferencia}" required="true"
+                                       requiredMessage="Campo Referência deve ser preenchido."   />
+
+            * Descrição: <p:inputText value="#{produtoMB.produto.prodDescricao}" size="60" required="true"
+                                      requiredMessage="Campo Descrição deve ser preenchido." />
+
+            * Tamanho: <p:inputText label="Tamanho" value="#{produtoMB.produto.prodTamanho}" required="true"    
+                                    requiredMessage="Campo Tamanho deve ser preenchido."/>
+
+            * Quant. Sete: <p:inputText label="Quantidade" value="#{produtoMB.produto.prodQuantidadeAtualSete}" required="true" 
+                                        requiredMessage="Campo Quantidade deve ser preenchido."   
+                                        converterMessage="Campo Quantidade é Numérico.">
+                <f:convertNumber integerOnly="true" minIntegerDigits="1"/>  
+            </p:inputText>  
+            * Quant. Total: <p:inputText label="Quantidade" value="#{produtoMB.produto.prodQuantidadeAtualTotal}" required="true" 
+                                         requiredMessage="Campo Quantidade deve ser preenchido."   
+                                         converterMessage="Campo Quantidade é Numérico.">
+                <f:convertNumber integerOnly="true" minIntegerDigits="1"/>  
+            </p:inputText>  
+            * Valor: 
+            <p:inputText label="Valor" value="#{produtoMB.produto.prodValorUnitario}" required="true"
+                         requiredMessage="Campo Valor deve ser preenchido."   
+                         converterMessage="Campo Valor é Numérico." onkeypress="mascara(this, data);">  
+            </p:inputText>  
+            Observação 
+            <p:inputText label="Observação" value="#{produtoMB.produto.prodObservacao}" required="false" size="60"/>
+            <p:commandButton value="Salvar" ajax="false" action="#{produtoMB.salvarProduto()}"/>
+            <h:panelGrid columns="3">
+                <p:commandButton value="Pesquisar" ajax="false" action="pesquisaProduto" immediate="true" />
+                <p:commandButton value="Excluir" oncomplete="confirmationDialogExcluir.show()"/>
+                <p:commandButton value="Novo" ajax="false" action="#{produtoMB.novoProduto()}" icon="ui-icon-plus" style="margin-left: 0px" immediate="true" />
+                <h:form>
+                    <p:confirmDialog widgetVar="confirmationDialogExcluir" severity="alert"   
+                                     message="Deseja realmente excluir o registro #{produtoMB.produto.prodCodigo}? "   
+                                     header="Excluir cadastro" appendToBody="true">
+                        <p:commandButton value="Sim, desejo"  action="#{produtoMB.excluiProduto()}" onclick="confirmationDialogExcluir.hide()"/>  
+                        <p:commandButton value="Não" onclick="confirmationDialogExcluir.hide()" />                                                       
+                    </p:confirmDialog>  
+                </h:form>
+            </h:panelGrid>
+        </h:panelGrid>
+    </ui:define>
+</ui:composition>

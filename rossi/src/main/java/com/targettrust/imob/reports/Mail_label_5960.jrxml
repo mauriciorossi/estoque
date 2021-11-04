@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="Mail_label_5960"
+
+		 language="groovy"		 columnCount="3"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="612"
+		 pageHeight="792"
+		 columnWidth="192"
+		 columnSpacing="8"
+		 leftMargin="13"
+		 rightMargin="7"
+		 topMargin="36"
+		 bottomMargin="20"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="2" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<queryString><![CDATA[SELECT
+     Students."LastName" AS Students_LastName,
+     Students."FirstName" AS Students_FirstName,
+     Students."MiddleName" AS Students_MiddleName,
+     Students."StudentID" AS Students_StudentID,
+     Students."gradelevel" AS Students_gradelevel,
+     Roster."StudentID" AS Roster_StudentID,
+     Classes."Name" AS Classes_Name,
+     Courses."title" AS Course_title,
+     Classes."Section" AS Classes_Section,
+     Classes."ClassID" AS Classes_ClassID,
+     Roster."Term1Absent" AS Roster_Term1Absent,
+     Roster."Term1Tardy" AS Roster_Term1Tardy,
+     Staff."LastName" AS Staff_LastName,
+     Staff."FirstName" AS Staff_FirstName,
+     Staff."MiddleName" AS Staff_MiddleName,
+     Staff."Salutation" AS Staff_Salutation,
+     Staff."StaffID" AS Staff_StaffID,
+     Address."Address1" AS Address_Address1,
+     Address."Address2" AS Address_Address2,
+     Address."City" AS Address_City,
+     Address."State" AS Address_State,
+     Address."ZIP" AS Address_ZIP,
+     Address."Greeting2" AS Address_Greeting2,
+     Students."Gender" AS Students_Gender,
+     Students."Birthdate" AS Students_Birthdate,
+     Students."HomePhone" AS Students_HomePhone
+FROM
+     "dbo"."Address" Address INNER JOIN "dbo"."Students" Students ON Address."AddressID" = Students."AddressID"
+     INNER JOIN "dbo"."Roster" Roster ON Students."StudentID" = Roster."StudentID"
+     INNER JOIN "dbo"."Classes" Classes ON Roster."ClassID" = Classes."ClassID"
+     INNER JOIN "dbo"."Staff" Staff ON Classes."StaffID" = Staff."StaffID"
+     INNER JOIN "dbo"."Courses" Courses ON Classes."CourseID" = Courses."CourseID"
+WHERE
+     Students."GradeLevel" IN ('06','07')
+ AND Roster."Enrolled" = 1
+ AND Courses."HomeRoom" = 1
+ORDER BY
+     Students.gradelevel ASC,
+     Courses."title" ASC,
+     Classes."Section" ASC,
+     Students."LastName" ASC,
+     Students."FirstName" ASC,
+     Students."MiddleName" ASC,
+     Roster."StudentID" ASC]]></queryString>
+
+	<field name="Students_LastName" class="java.lang.String"/>
+	<field name="Students_FirstName" class="java.lang.String"/>
+	<field name="Students_MiddleName" class="java.lang.String"/>
+	<field name="Students_StudentID" class="java.lang.Integer"/>
+	<field name="Students_gradelevel" class="java.lang.String"/>
+	<field name="Roster_StudentID" class="java.lang.Integer"/>
+	<field name="Classes_Name" class="java.lang.String"/>
+	<field name="Course_title" class="java.lang.String"/>
+	<field name="Classes_Section" class="java.lang.String"/>
+	<field name="Classes_ClassID" class="java.lang.Integer"/>
+	<field name="Roster_Term1Absent" class="java.lang.Float"/>
+	<field name="Roster_Term1Tardy" class="java.lang.Float"/>
+	<field name="Staff_LastName" class="java.lang.String"/>
+	<field name="Staff_FirstName" class="java.lang.String"/>
+	<field name="Staff_MiddleName" class="java.lang.String"/>
+	<field name="Staff_Salutation" class="java.lang.String"/>
+	<field name="Staff_StaffID" class="java.lang.Integer"/>
+	<field name="Address_Address1" class="java.lang.String"/>
+	<field name="Address_Address2" class="java.lang.String"/>
+	<field name="Address_City" class="java.lang.String"/>
+	<field name="Address_State" class="java.lang.String"/>
+	<field name="Address_ZIP" class="java.lang.String"/>
+	<field name="Address_Greeting2" class="java.lang.String"/>
+	<field name="Students_Gender" class="java.lang.String"/>
+	<field name="Students_Birthdate" class="java.sql.Timestamp"/>
+	<field name="Students_HomePhone" class="java.lang.String"/>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="72"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="9"
+						y="2"
+						width="138"
+						height="13"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{Students_LastName} +"," + $F{Students_FirstName} + " " + $F{Students_MiddleName} + " "]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="148"
+						y="2"
+						width="41"
+						height="13"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{Students_Gender}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="9"
+						y="15"
+						width="182"
+						height="31"
+						key="textField-1"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="Times-Roman" pdfFontName="Helvetica" size="8" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{Address_Address1} + "\n" +
+($F{Address_Address2}.trim().length() > 0 ? $F{Address_Address2} + "\n" : "")  +
+$F{Address_City} +
+", FL " + $F{Address_ZIP}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="MM/dd/yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="123"
+						y="47"
+						width="66"
+						height="11"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.sql.Timestamp"><![CDATA[$F{Students_Birthdate}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="86"
+						y="47"
+						width="38"
+						height="11"
+						key="staticText-1"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+				<text><![CDATA[Birthdate:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="9"
+						y="47"
+						width="77"
+						height="12"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{Students_HomePhone}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="8"
+						y="58"
+						width="135"
+						height="11"
+						key="staticText-2"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+				<text><![CDATA[YOURSCHOOL School, Grade:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="142"
+						y="57"
+						width="48"
+						height="12"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{Students_gradelevel}]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

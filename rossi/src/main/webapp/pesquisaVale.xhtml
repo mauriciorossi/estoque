@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="./tempInterno.xhtml"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core">
+    <ui:define name="deck">
+            <h:panelGroup class="semBorda" >
+                <p:panelGrid  style="width: 100%;" columns="2" id="painel">
+                    <f:facet name="header">  
+                        <h3>Pesquisa de Vale(s)</h3>
+                    </f:facet>
+                    <p:selectOneMenu value="#{valeMB.vale.valeComboBoxEscolhido}" style="height: 30px; width: 130px; margin-left: 140px" 
+                                     required="true"> 
+                        <f:selectItem itemLabel="Selecione" itemValue="" /> 
+                        <f:selectItem itemLabel="Nome" itemValue="1"/> 
+                        <f:selectItem itemLabel="Código" itemValue="2" />
+                    </p:selectOneMenu>
+                    <h:panelGrid columns="3" style="margin-left: 0px">
+                        <p:inputText size="70" style="height: 30px; margin-left: 0px;"
+                                     value="#{valeMB.vale.valeFiltro}" 
+                                     required="true" 
+                                     requiredMessage="Digite um valor para iniciar a pesquisa!" 
+                                     label="pesquisa"> 
+                        </p:inputText> 
+                        <p:commandButton value="Pesquisar" ajax="false" update=":tablefiltered" icon="ui-icon-search" style="margin:0; margin-left: 0px"/>
+                        <p:commandButton value="Novo" ajax="false" action="#{valeMB.novoVale()}" icon="ui-icon-plus" style="margin-left: 0px" immediate="true" />
+                    </h:panelGrid>
+                </p:panelGrid>
+            </h:panelGroup>
+    </ui:define>
+    <ui:define name="acao">
+        <h:form id="tablefiltered"> 
+            <p:dataTable id="dataTable" var="cliente" 
+                         value="#{valeMB.lista}"  
+                         paginator="true" rows="15"  
+                         >            
+                <p:column>  
+                    <f:facet name="header"> 
+                        <h:outputText value="Código" />  
+                    </f:facet>  
+                    <h:outputText value="#{valeMB.vale.valeId}" />  
+                </p:column>  
+                <p:column>  
+                    <f:facet name="header">  
+                        <h:outputText value="Nome" />  
+                    </f:facet>  
+                    <h:outputText value="#{valeMB.vale.valeValor}" />  
+                </p:column>  
+                <p:column>  
+                    <f:facet name="header">  
+                        <h:outputText value="Nome" />  
+                    </f:facet>  
+                    <h:outputText value="#{valeMB.vale.valeNomeCliente}" />  
+                </p:column>  
+                <p:column>  
+                    <f:facet name="header">  
+                        <h:outputText value="CPF" />  
+                    </f:facet>  
+                    <h:outputText value="#{valeMB.vale.valeData}" />  
+                </p:column>  
+                <p:column>  
+                    <f:facet name="header">  
+                        <h:outputText value="Endereço" />  
+                    </f:facet>  
+                    <h:outputText value="#{valeMB.vale.valeDataUtilizacao}" />  
+                </p:column>
+                <p:column style="text-align: center">   
+                    <f:facet name="header"> 
+                        <h:outputText value="Editar" /> 
+                    </f:facet> 
+                    <p:commandButton immediate="true" ajax="false" label="Alterar" icon="ui-icon-pencil"  process="@this" 
+                                     action="#{valeMB.editarVale()}">               
+                        <f:setPropertyActionListener  value="#{vale}" 
+                                                      target="#{valeMB.vale}"/> 
+                    </p:commandButton> 
+                </p:column> 
+            </p:dataTable>  
+        </h:form> 
+    </ui:define>
+</ui:composition>
+
+

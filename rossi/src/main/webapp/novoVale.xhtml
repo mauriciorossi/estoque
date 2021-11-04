@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="./tempInterno.xhtml"
+                xmlns:f="http://java.sun.com/jsf/core">
+    <h:outputScript name="locale-primefaces.js" library="js" />   
+    <ui:define name="deck">
+        <h:panelGroup class="semBorda" >
+            <p:panelGrid  style="width: 100%;" columns="1" id="painel">
+                <f:facet name="header">  
+                    <h3>Cadastro de Vale(s)</h3>
+                </f:facet>
+            </p:panelGrid>
+        </h:panelGroup>
+    </ui:define>
+    <ui:define name="acao">
+        <h:panelGrid columns="2">
+            * Código: <p:inputText label="Código" value="#{valeMB.vale.valeId}" required="true" size="5" readonly="true" >
+                <f:convertNumber integerOnly="true" />
+            </p:inputText>
+            * Nome:  <p:autoComplete value="#{valeMB.clienteSelecionado}" 
+                                     completeMethod="#{valeMB.completaNome}"
+                                     converter="clienteConverter"
+                                     var="cliente"
+                                     itemLabel="#{cliente.clienteNome}" 
+                                     itemValue="#{cliente}"
+                                     forceSelection="true"
+                                     minQueryLength="3"
+                                     maxResults="5"
+                                     size="40"/>
+            * Valor: <p:inputText label="Telefone" value="#{valeMB.vale.valeValor}" required="true"/>
+            * Vencimento: <p:calendar  locale="pt" label="Telefone" value="#{valeMB.vale.valeDataUtilizacao}" required="true"/>
+            * Data de Uso: <p:calendar  locale="pt" label="Telefone" value="#{valeMB.vale.valeDataUtilizacao}" required="true"/> 
+            <p:commandButton value="Salvar" ajax="false" action="#{valeMB.salvaVale()}"/>
+            <h:panelGrid columns="3">
+                <p:commandButton value="Pesquisar" ajax="false" action="pesquisaVale" immediate="true" />
+                <p:commandButton value="Excluir" oncomplete="confirmationDialogExcluir.show()"/>
+                    <p:commandButton value="Novo" ajax="false" action="#{valeMB.novoVale()}" icon="ui-icon-plus" style="margin-left: 0px" immediate="true" />
+                <h:form>
+                    <p:confirmDialog widgetVar="confirmationDialogExcluir" severity="alert"   
+                                     message="Deseja realmente excluir o registro #{valeMB.vale.valeId}? "   
+                                     header="Excluir cadastro" appendToBody="true">
+                        <p:commandButton value="Sim, desejo"  action="#{valeMB.excluiVale()}" onclick="confirmationDialogExcluir.hide()"/>  
+                        <p:commandButton value="Não" onclick="confirmationDialogExcluir.hide()" />                                                       
+                    </p:confirmDialog>  
+                </h:form>
+            </h:panelGrid>
+        </h:panelGrid>
+    </ui:define>
+
+</ui:composition>

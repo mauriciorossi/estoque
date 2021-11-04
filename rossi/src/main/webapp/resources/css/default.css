@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+}
+
+.colunaCodigo{
+    text-align: center;
+}
+
+#header {    
+    background-color: #E8E9EA;
+    font-family: georgia;
+}
+
+h4{
+    font-size: 18pt;
+    font-family: georgia;
+    border-bottom: 1px solid #ccc;
+}
+
+
+#bemvindo {
+    width: 100%;
+    text-align: center;
+    padding-top: 10%;
+    font-size: 20pt;
+    color: #ccc;
+}
+
+#login{  
+    text-align: center;
+    padding-top: 10%;
+    font-size: 20pt;
+    color: #000000;
+    font-style: italic;
+    font-family: sans-serif;
+    width: 40%; margin: 0px auto; 
+
+}
+
+#btEntrar {  
+    width: 150px;  
+    height: 60px;  
+    font-family: verdana;  
+    width: 22%; 
+    font-size: 15pt;
+    
+  
+} 
+
+#deck{
+    border:1px #333 solid; 
+       text-align: center;
+}
+
+#checkbox{
+    font-size: 13pt;
+    font-family: sans-serif;
+    height: 25px;
+    border: 1px outset;
+    width: 10%; margin: 0px auto;
+   
+}
+
+.semBorda tr, .semBorda td {  
+border: none !important;  
+padding-left: 0px;
+border-spacing: 0px;
+border-style: solid;
+table {border-collapse: collapse;}
+}  
+
+.imagemNovo     { width: 1px; height: 1px; background-image: url(resources/img/editar.gif)     !important;}  

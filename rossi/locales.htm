@@ -1,0 +1,1979 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="description" content="GUJ - O portal de desenvolvedores do Brasil">
+
+<meta property="og:title" content="GUJ - O portal de desenvolvedores do Brasil">
+<meta property="og:site_name" content="guj.com.br">
+<meta property="og:url" content="http://www.guj.com.br">
+<meta property="og:type" content="forum">
+<meta property="og:image" content="http://www.guj.com.br/imgs/guj-logo.png">
+
+<script type="text/javascript" async="" src="./locales_files/ados"></script><script type="text/javascript" async="" src="./locales_files/ados.js"></script><script type="text/javascript">var p="http",d="static";if(document.location.protocol=="https:"){p+="s";d="engine";}var z=document.createElement("script");z.type="text/javascript";z.async=true;z.src=p+"://"+d+".adzerk.net/ados.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(z,s);</script>
+<script type="text/javascript">
+	var ados = ados || {};
+	ados.run = ados.run || [];
+	ados.run.push(function() {
+		/* load placement for account: caelum, site: guj, size: 728x90 - Leaderboard*/
+		ados_add_placement(7120, 49043, "postBanner", 4);
+		/* load placement for account: caelum, site: guj, size: 300x250 - Medium Rectangle*/
+		ados_add_placement(7120, 49043, "medRectangleAd", 5);
+		/* load placement for account: caelum, site: guj, size: 300x250 - Medium Rectangle*/
+		ados_add_placement(7120, 49043, "adSideBar", 5);
+		// para o futuro:
+		//ados_setKeywords('java, hibernate, jsf'); 
+		ados_load();
+	});
+</script>
+<link href="./locales_files/guj3.css" media="screen" rel="stylesheet" type="text/css">
+<style type="text/css">@import url( /templates/default/styles/style.css?1398063681690 );</style>
+<style type="text/css">@import url( /templates/default/styles/pt_BR.css?1398063681690 );</style>
+<script type="text/javascript" src="./locales_files/jquery-1.3.1.min.js"></script>
+<script type="text/javascript" src="./locales_files/jquery.corners.min.js"></script>
+<!--[if IE]>
+<link href="/stylesheets/guj3-ie.css?1398063681690" media="screen" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if lt IE 9]>
+	<script src="<c:url value="/js/deps/html5shiv.js"/>"></script>
+<![endif]-->
+<!--[if lte IE 8]>
+	<script type="text/javascript">
+		var htmlshim='abbr,article,aside,audio,canvas,details,figcaption,figure,footer,header,mark,meter,nav,output,progress,section,summary,time,video'.split(',');
+		var htmlshimtotal=htmlshim.length;
+		for(var i=0;i<htmlshimtotal;i++) document.createElement(htmlshim[i]);
+	</script>
+<![endif]-->
+  
+<script type="text/javascript">
+$().ready(function() {
+	$("#returnPath").val(document.location);
+	
+	if (!$.browser.msie && navigator.userAgent.indexOf("Chrome") == -1 && navigator.userAgent.indexOf("Firefox/4") == -1) {
+		$("table, table th").corners("6px");
+	}
+});
+</script>
+
+	<style type="text/css">@import url( /templates/default/styles/SyntaxHighlighter.css?1398063681690 );</style>
+
+<title>[RESPONDIDO] calendar em português no Primefaces 3</title>
+	
+
+<style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style><style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style><style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style><style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style><style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style><style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style><style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style><style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style></head>
+<body class="pt_BR">
+	
+	<div id="header">
+	    <div class="container1">
+	      <div class="container2">
+	        <a href="http://www.guj.com.br/" id="logo">GUJ</a>
+	        <nav class="nav main-nav piped-nav">
+				<ul class="nav-items">
+					<li class="nav-item">
+						<a class="button" href="http://www.guj.com.br/">
+							Perguntas
+						</a>
+					</li>
+					<li class="nav-item menu-unanswered">
+						<a class="button" href="http://www.guj.com.br/sem-respostas">
+							Sem respostas
+						</a>
+					</li>
+					<li class="nav-item menu-rank">
+						<a class="button" href="http://www.guj.com.br/ranking">
+							Usuários
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="button" href="http://www.guj.com.br/noticias">
+							Notícias
+						</a>
+					</li>
+					<li class="nav-item menu-recent-topics">
+						<a class="button" href="http://www.guj.com.br/recentTopics/list.java">
+							Tópicos recentes
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="button current" href="http://www.guj.com.br/forums/list.java">
+							<span class="menu-title">Discussões</span>
+							<span class="menu-subtitle">Antigo Fórum</span>
+						</a>
+					</li>
+					<li class="ask nav-item">
+						<a class="button" href="http://www.guj.com.br/perguntar">
+							Pergunte
+						</a>
+					</li>
+				</ul>
+			</nav>
+	      </div>
+	    </div>
+	  </div>
+
+<div id="menu">
+	<div class="container1">
+		<div class="container2">
+			  GUJ Forum. <a href="http://www.guj.com.br/user/insert.java" style="color: #21571F; font-weight: bold;">Crie seu login</a>, 
+	          ou digite-o para logar no site.
+
+	          <form class="login" action="http://www.guj.com.br/jforum.java?module=user&action=validateLogin" method="POST">
+	            <input type="hidden" name="returnPath" id="returnPath" value="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3">
+	            Usuário: <input class="campo" name="username" size="8" tabindex="3">
+				Senha: <input class="campo" style="border: 0px;" type="password" size="8" name="password" tabindex="4">
+	            <input type="submit" class="botao" tabindex="5" name="login" value="Entrar">
+	          </form>
+			
+			
+			<form id="cse-search-box" class="busca" action="http://www.guj.com.br/search">
+			    <input type="hidden" name="cx" value="partner-pub-9448585618971060:4001950301">
+			    <input type="hidden" name="cof" value="FORID:10">
+			    <input type="hidden" name="ie" value="UTF-8">
+			    <input class="campo_rounded" type="text" name="q" size="31" tabindex="1" style="border: 1px solid rgb(126, 157, 185); padding: 2px; background-image: url(http://www.google.com.br/cse/intl/en/images/google_custom_search_watermark.gif); background-color: rgb(255, 255, 255); background-position: 0% 50%; background-repeat: no-repeat no-repeat;">
+			    <input type="submit" class="botao" tabindex="2" value="OK">
+			<input name="siteurl" type="hidden" value="www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3"><input name="ref" type="hidden" value="www.google.com.br/"><input name="ss" type="hidden" value=""></form>
+			<script type="text/javascript" src="./locales_files/brand"></script>
+		
+			<iframe class="facebook-curtir" src="./locales_files/like.htm" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<table class="first-content" border="0">
+		<tbody><tr>
+			<td width="100%">
+
+
+<!--
+<script type="text/javascript" src="/templates/default/js/jquery.js?1398063681690"></script>
+-->
+<script type="text/javascript" src="./locales_files/jquery.jeditable.pack.js"></script>
+<script type="text/javascript" src="./locales_files/post_show.js"></script>
+<script type="text/javascript" src="./locales_files/post.js"></script>
+<script type="text/javascript" src="./locales_files/pagination.js"></script>
+
+
+<script type="text/javascript">
+<!--
+function showEmail(beforeAt, afterAt)
+{
+	return beforeAt + "@" + afterAt;
+}
+
+var starOn = new Image();
+starOn.src = "/templates/default/images/star_on.gif";
+
+var starOff = new Image();
+starOff.src = "/templates/default/images/star_off.gif";
+
+function writeStars(q, postId)
+{
+	for (var i = 0; i < 5; i++) {
+		var name = "star" + postId + "_" + i;
+		document.write("<img name='" + name + "' alt='*' />");
+		document.images[name].src = q > i ? starOn.src : starOff.src;
+	}
+}
+
+function addBookmark(relationType, relationId)
+{
+	var w = window.open('/bookmarks/insert/' + relationType + '/' + relationId + '.java', 'bookmark_add', 'width=700, height=200, scrollbars=auto, resizable=true');
+	w.focus();
+}
+
+
+-->
+</script>
+
+
+<table cellspacing="0" cellpadding="10" width="100%" align="center" border="0">
+	<tbody><tr>
+		<td class="bodyline">
+			<table cellspacing="2" cellpadding="2" width="100%" border="0">
+				<tbody><tr>
+					<td valign="middle" align="left" colspan="2">
+						<span class="maintitle"><a href="./locales_files/locales.htm" name="top" class="maintitle" id="top">[RESPONDIDO] calendar em português no Primefaces 3</a></span>
+						&nbsp;<a href="http://www.guj.com.br/rss/topicPosts/262520.java"><img src="./locales_files/xml_button.gif" border="0" alt="XML"></a>
+						
+						<iframe allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" class="twitter-share-button twitter-count-vertical" src="./locales_files/tweet_button.htm" style="width: 95px; height: 20px; " title="Twitter For Websites: Tweet Button"></iframe>
+						
+						<iframe src="./locales_files/like(1).htm" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:24px;" allowtransparency="true"></iframe>
+					</td>
+				</tr>
+			</tbody></table>
+			
+			<table cellspacing="2" cellpadding="2" width="100%" border="0">
+				<tbody><tr>
+					<td width="8%" align="left" valign="bottom" nowrap="nowrap">
+								<a href="http://www.guj.com.br/posts/reply/0/262520.java" rel="nofollow" class="icon_reply nav"><img src="./locales_files/transp.gif" alt=""></a>
+					</td>
+
+					<td valign="middle" align="left" colspan="0">
+						<span class="nav">
+						<a class="nav" href="http://www.guj.com.br/forums/list.java">Índice dos Fóruns </a> 
+            			» <a class="nav" href="http://www.guj.com.br/forums/show/6.java">Desenvolvimento Web </a></span>
+					</td>
+					<td valign="middle" align="right">		<div class="pagination">
+
+
+	<span class="current">1</span>
+
+	<a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3/2">2</a>
+
+			
+				<a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3/2">&#9658;</a>
+
+		<a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#goto" onclick="return overlay(this, &#39;goToBox&#39;, &#39;rightbottom&#39;);">Ir</a>
+		<div id="goToBox">
+			<div class="title">Ir para a página...</div>
+			<div class="form">
+				<input type="text" style="width: 50px;" id="pageToGo">
+				<input type="button" value=" Ir " onclick="goToAnotherPage(2, 15, &#39;&#39;, &#39;posts&#39;, &#39;list&#39;, 262520, &#39;.java&#39;);">
+				<input type="button" value="Cancel" onclick="document.getElementById(&#39;goToBox&#39;).style.display = &#39;none&#39;;">
+			</div>
+		</div>
+
+		</div>
+</td>
+				</tr>
+			</tbody></table>
+
+			<table class="forumline" cellspacing="1" cellpadding="3" width="100%" border="0">
+				
+				<tbody><tr>
+					<th class="thleft" nowrap="nowrap" width="150" height="26">Autor</th>
+					<th class="thright" nowrap="nowrap" width="100%">Mensagem</th>
+				</tr>
+
+				<!-- POST LISTING --> 
+					
+	
+					<tr>
+						<td colspan="2">
+<div class="postinfo">
+	<div class="date">
+				<a href="http://www.guj.com.br/prepost/262520/1372034/respondido-calendar-em-portugues-no-primefaces-3"><img src="./locales_files/icon_minipost_new.gif" alt="[Post New]"></a>10/01/2012 10:59:44
+	</div>
+	<div class="subject">&nbsp;&nbsp; &nbsp;<b>Assunto:</b> <a name="1372034">[RESPONDIDO] calendar em português no Primefaces 3</a></div>
+	<div class="action">
+
+			<a href="http://www.guj.com.br/posts/quote/0/1372034.java" rel="nofollow" class="icon_quote"><img src="./locales_files/transp.gif" alt=""></a>
+
+
+
+		<a class="nav" href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#top"><img src="./locales_files/icon_up.gif" alt="[Up]"></a>
+	</div>
+</div>						</td>
+					</tr>
+
+					<tr>
+						<!-- Username -->
+
+
+						<td class="row1" valign="top" align="left" rowspan="2">
+<span class="genmed"><b>karinacomk.lima</b></span>
+<br>
+
+<span class="gensmall">
+	JavaTeenager
+	<br>
+
+<br> 
+
+	Membro desde: 07/08/2010 10:34:34<br>
+	Mensagens: 169
+<br>
+
+
+
+		<span class="offline">Offline </span>
+</span>
+<br>						</td>
+		
+						<!-- Message -->
+						<td class="row1" valign="top" id="post_text_1372034">
+							<span class="postbody">
+									Olá!!
+<br> 
+<br> Alguém sabe como colocar o calendário do primefaces em português? Estou usando a versão mais novo do prime, já tentei locale = "pt_BR" mas não funcionou...
+<br> 
+<br> Vlww
+<br> 
+<br> Att
+<br> Karina
+							</span>
+
+							<!-- Attachments -->
+
+								
+								<p><i><span class="gensmall">This message was edited 1 time. Last update was at 10/01/2012 11:48:43</span></i></p>
+						</td>
+					</tr>
+
+		
+					<tr> 
+						<td class="row1" valign="bottom" nowrap="nowrap" height="28" width="100%">
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+	<td valign="middle" nowrap="nowrap"> 
+		<a href="http://www.guj.com.br/user/profile/116436.java" class="icon_profile"><img src="./locales_files/transp.gif" alt=""></a>
+		<a href="http://www.guj.com.br/pm/sendTo/116436.java" class="icon_pm"><img src="./locales_files/transp.gif" alt=""></a>
+
+		
+		
+
+		
+		
+	</td>
+
+</tr>
+</tbody></table>						</td>
+					</tr>
+		
+					<tr>
+						<td class="spacerow" colspan="2" height="1"><img src="./locales_files/spacer.gif" alt="" width="1" height="1"></td>
+					</tr>
+					
+						<tr>
+							<td colspan="2" align="center" class="row1">
+								<div id="postBanner"><a href="http://engine.adzerk.net/r?e=eyJhdiI6MzAyMjMsImF0Ijo0LCJjbSI6NDE2MzUsImNoIjoxMDY1MSwiY3IiOjExMjk5NCwiZGkiOiI3ZGYzZWQ1MzM2OWY0ZjNmOWFlY2UyMWMxYjEzZjljNSIsImRtIjoxLCJmYyI6MTUzNzQwLCJmbCI6NzUwMjUsImt3IjoidW5kZWZpbmVkIiwibnciOjcxMjAsInBjIjowLCJwciI6MzE0NjgsInJ0IjoxLCJyZiI6Imh0dHBzOi8vd3d3Lmdvb2dsZS5jb20uYnIvIiwic3QiOjQ5MDQzLCJ1ayI6InVlMS0wZTAwNmI2OGVhZWM0MTgwYTExYWI1YjRkM2RjZTgwNyIsInRzIjoxMzk4MTMxNTU4MDUxLCJ1ciI6Imh0dHA6Ly93d3cuY2FzYWRvY29kaWdvLmNvbS5ici8_dXRtX3NvdXJjZT1HVUomdXRtX21lZGl1bT1iYW5uZXImdXRtX2NhbXBhaWduPXN0YXRpY19iYW5uZXIifQ&s=8Y6lx473A3eUvLpHB4hqL3CAFIo" rel="nofollow" target="_blank" title=""><img src="./locales_files/a009d7992df648f98ea79f722529f177.png" title="" alt="" border="0" width="728" height="90"></a><img height="0px" width="0px" border="0" src="./locales_files/i.gif"></div>
+							</td>
+						</tr>
+					
+	
+					<tr>
+						<td colspan="2">
+<div class="postinfo">
+	<div class="date">
+				<a href="http://www.guj.com.br/prepost/262520/1372059/respondido-calendar-em-portugues-no-primefaces-3"><img src="./locales_files/icon_minipost_new.gif" alt="[Post New]"></a>10/01/2012 11:34:27
+	</div>
+	<div class="subject">&nbsp;&nbsp; &nbsp;<b>Assunto:</b> <a name="1372059">Re:calendar em português no Primefaces 3</a></div>
+	<div class="action">
+
+			<a href="http://www.guj.com.br/posts/quote/0/1372059.java" rel="nofollow" class="icon_quote"><img src="./locales_files/transp.gif" alt=""></a>
+
+
+
+		<a class="nav" href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#top"><img src="./locales_files/icon_up.gif" alt="[Up]"></a>
+	</div>
+</div>						</td>
+					</tr>
+
+					<tr>
+						<!-- Username -->
+
+
+						<td class="row2" valign="top" align="left" rowspan="2">
+<span class="genmed"><b>edudebom</b></span>
+<br>
+
+<span class="gensmall">
+	JavaEvangelist
+	<br>
+
+<br> 
+
+	Membro desde: 03/10/2008 22:58:00<br>
+	Mensagens: 363
+<br>
+
+	Localização: Garibaldi - RS
+	<br>
+
+
+		<span class="offline">Offline </span>
+</span>
+<br>						</td>
+		
+						<!-- Message -->
+						<td class="row2" valign="top" id="post_text_1372059">
+							<span class="postbody">
+									Consegui somente colocando esse código javascript.
+<br> 
+<br> <div class="dp-highlighter"><div class="bar"><div class="tools"><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;ViewSource&#39;,this);return false;">view plain</a><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;CopyToClipboard&#39;,this);return false;">copy to clipboard</a><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;PrintSource&#39;,this);return false;">print</a><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;About&#39;,this);return false;">?</a></div></div><ol start="1" class="dp-j"><li class="alt"><span><span>PrimeFaces.locales[</span><span class="string">'pt'</span><span>] = {&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;closeText: <span class="string">'Fechar'</span><span>,&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prevText: <span class="string">'Anterior'</span><span>,&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nextText: <span class="string">'Próximo'</span><span>,&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;currentText: <span class="string">'Começo'</span><span>,&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;monthNames: [<span class="string">'Janeiro'</span><span>,</span><span class="string">'Fevereiro'</span><span>,</span><span class="string">'Março'</span><span>,</span><span class="string">'Abril'</span><span>,</span><span class="string">'Maio'</span><span>,</span><span class="string">'Junho'</span><span>,</span><span class="string">'Julho'</span><span>,</span><span class="string">'Agosto'</span><span>,</span><span class="string">'Setembro'</span><span>,</span><span class="string">'Outubro'</span><span>,</span><span class="string">'Novembro'</span><span>,</span><span class="string">'Dezembro'</span><span>],&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;monthNamesShort: [<span class="string">'Jan'</span><span>,</span><span class="string">'Fev'</span><span>,</span><span class="string">'Mar'</span><span>,</span><span class="string">'Abr'</span><span>,</span><span class="string">'Mai'</span><span>,</span><span class="string">'Jun'</span><span>, </span><span class="string">'Jul'</span><span>,</span><span class="string">'Ago'</span><span>,</span><span class="string">'Set'</span><span>,</span><span class="string">'Out'</span><span>,</span><span class="string">'Nov'</span><span>,</span><span class="string">'Dez'</span><span>],&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dayNames: [<span class="string">'Domingo'</span><span>,</span><span class="string">'Segunda'</span><span>,</span><span class="string">'Terça'</span><span>,</span><span class="string">'Quarta'</span><span>,</span><span class="string">'Quinta'</span><span>,</span><span class="string">'Sexta'</span><span>,</span><span class="string">'Sábado'</span><span>],&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dayNamesShort: [<span class="string">'Dom'</span><span>,</span><span class="string">'Seg'</span><span>,</span><span class="string">'Ter'</span><span>,</span><span class="string">'Qua'</span><span>,</span><span class="string">'Qui'</span><span>,</span><span class="string">'Sex'</span><span>,</span><span class="string">'Sáb'</span><span>],&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dayNamesMin: [<span class="string">'D'</span><span>,</span><span class="string">'S'</span><span>,</span><span class="string">'T'</span><span>,</span><span class="string">'Q'</span><span>,</span><span class="string">'Q'</span><span>,</span><span class="string">'S'</span><span>,</span><span class="string">'S'</span><span>],&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;weekHeader: <span class="string">'Semana'</span><span>,&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;firstDay: <span class="number">1</span><span>,&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;isRTL: <span class="keyword">false</span><span>,&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;showMonthAfterYear: <span class="keyword">false</span><span>,&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yearSuffix: <span class="string">''</span><span>,&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timeOnlyTitle: <span class="string">'Só Horas'</span><span>,&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timeText: <span class="string">'Tempo'</span><span>,&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hourText: <span class="string">'Hora'</span><span>,&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;minuteText: <span class="string">'Minuto'</span><span>,&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;secondText: <span class="string">'Segundo'</span><span>,&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;currentText: <span class="string">'Data Atual'</span><span>,&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ampm: <span class="keyword">false</span><span>,&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;month: <span class="string">'Mês'</span><span>,&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;week: <span class="string">'Semana'</span><span>,&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;day: <span class="string">'Dia'</span><span>,&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;allDayText : <span class="string">'Todo Dia'</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="java" cols="60" rows="10" style="display: none;">PrimeFaces.locales['pt'] = {
+                closeText: 'Fechar',
+                prevText: 'Anterior',
+                nextText: 'Próximo',
+                currentText: 'Começo',
+                monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+                monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun', 'Jul','Ago','Set','Out','Nov','Dez'],
+                dayNames: ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'],
+                dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'],
+                dayNamesMin: ['D','S','T','Q','Q','S','S'],
+                weekHeader: 'Semana',
+                firstDay: 1,
+                isRTL: false,
+                showMonthAfterYear: false,
+                yearSuffix: '',
+                timeOnlyTitle: 'Só Horas',
+                timeText: 'Tempo',
+                hourText: 'Hora',
+                minuteText: 'Minuto',
+                secondText: 'Segundo',
+                currentText: 'Data Atual',
+                ampm: false,
+                month: 'Mês',
+                week: 'Semana',
+                day: 'Dia',
+                allDayText : 'Todo Dia'
+            };
+</textarea>
+							</span>
+
+							<!-- Attachments -->
+
+						</td>
+					</tr>
+
+		
+					<tr> 
+						<td class="row2" valign="bottom" nowrap="nowrap" height="28" width="100%">
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+	<td valign="middle" nowrap="nowrap"> 
+		<a href="http://www.guj.com.br/user/profile/48750.java" class="icon_profile"><img src="./locales_files/transp.gif" alt=""></a>
+		<a href="http://www.guj.com.br/pm/sendTo/48750.java" class="icon_pm"><img src="./locales_files/transp.gif" alt=""></a>
+
+		
+		
+
+		
+		
+	</td>
+
+</tr>
+</tbody></table>						</td>
+					</tr>
+		
+					<tr>
+						<td class="spacerow" colspan="2" height="1"><img src="./locales_files/spacer.gif" alt="" width="1" height="1"></td>
+					</tr>
+					
+					
+	
+					<tr>
+						<td colspan="2">
+<div class="postinfo">
+	<div class="date">
+				<a href="http://www.guj.com.br/prepost/262520/1372062/respondido-calendar-em-portugues-no-primefaces-3"><img src="./locales_files/icon_minipost_new.gif" alt="[Post New]"></a>10/01/2012 11:39:16
+	</div>
+	<div class="subject">&nbsp;&nbsp; &nbsp;<b>Assunto:</b> <a name="1372062">Re:calendar em português no Primefaces 3</a></div>
+	<div class="action">
+
+			<a href="http://www.guj.com.br/posts/quote/0/1372062.java" rel="nofollow" class="icon_quote"><img src="./locales_files/transp.gif" alt=""></a>
+
+
+
+		<a class="nav" href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#top"><img src="./locales_files/icon_up.gif" alt="[Up]"></a>
+	</div>
+</div>						</td>
+					</tr>
+
+					<tr>
+						<!-- Username -->
+
+
+						<td class="row1" valign="top" align="left" rowspan="2">
+<span class="genmed"><b>karinacomk.lima</b></span>
+<br>
+
+<span class="gensmall">
+	JavaTeenager
+	<br>
+
+<br> 
+
+	Membro desde: 07/08/2010 10:34:34<br>
+	Mensagens: 169
+<br>
+
+
+
+		<span class="offline">Offline </span>
+</span>
+<br>						</td>
+		
+						<!-- Message -->
+						<td class="row1" valign="top" id="post_text_1372062">
+							<span class="postbody">
+									E como eu chamo no arquivo .xhtml? Continuo tento que colocar o atributo locale ou não ?
+							</span>
+
+							<!-- Attachments -->
+
+						</td>
+					</tr>
+
+		
+					<tr> 
+						<td class="row1" valign="bottom" nowrap="nowrap" height="28" width="100%">
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+	<td valign="middle" nowrap="nowrap"> 
+		<a href="http://www.guj.com.br/user/profile/116436.java" class="icon_profile"><img src="./locales_files/transp.gif" alt=""></a>
+		<a href="http://www.guj.com.br/pm/sendTo/116436.java" class="icon_pm"><img src="./locales_files/transp.gif" alt=""></a>
+
+		
+		
+
+		
+		
+	</td>
+
+</tr>
+</tbody></table>						</td>
+					</tr>
+		
+					<tr>
+						<td class="spacerow" colspan="2" height="1"><img src="./locales_files/spacer.gif" alt="" width="1" height="1"></td>
+					</tr>
+					
+					
+	
+					<tr>
+						<td colspan="2">
+<div class="postinfo">
+	<div class="date">
+				<a href="http://www.guj.com.br/prepost/262520/1372068/respondido-calendar-em-portugues-no-primefaces-3"><img src="./locales_files/icon_minipost_new.gif" alt="[Post New]"></a>10/01/2012 11:44:34
+	</div>
+	<div class="subject">&nbsp;&nbsp; &nbsp;<b>Assunto:</b> <a name="1372068">Re:calendar em português no Primefaces 3</a></div>
+	<div class="action">
+
+			<a href="http://www.guj.com.br/posts/quote/0/1372068.java" rel="nofollow" class="icon_quote"><img src="./locales_files/transp.gif" alt=""></a>
+
+
+
+		<a class="nav" href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#top"><img src="./locales_files/icon_up.gif" alt="[Up]"></a>
+	</div>
+</div>						</td>
+					</tr>
+
+					<tr>
+						<!-- Username -->
+
+
+						<td class="row2" valign="top" align="left" rowspan="2">
+<span class="genmed"><b>edudebom</b></span>
+<br>
+
+<span class="gensmall">
+	JavaEvangelist
+	<br>
+
+<br> 
+
+	Membro desde: 03/10/2008 22:58:00<br>
+	Mensagens: 363
+<br>
+
+	Localização: Garibaldi - RS
+	<br>
+
+
+		<span class="offline">Offline </span>
+</span>
+<br>						</td>
+		
+						<!-- Message -->
+						<td class="row2" valign="top" id="post_text_1372068">
+							<span class="postbody">
+									Acredito que para adaptar ao seu caso, troque <br> <br> <div class="dp-highlighter"><div class="bar"><div class="tools"><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;ViewSource&#39;,this);return false;">view plain</a><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;CopyToClipboard&#39;,this);return false;">copy to clipboard</a><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;PrintSource&#39;,this);return false;">print</a><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;About&#39;,this);return false;">?</a></div></div><ol start="1" class="dp-j"><li class="alt"><span><span>PrimeFaces.locales[</span><span class="string">'pt'</span><span>] = { &nbsp;&nbsp;</span></span></li></ol></div><textarea name="code" class="java" cols="60" rows="10" style="display: none;">PrimeFaces.locales['pt'] = { </textarea> do meu código<br> <br> para <div class="dp-highlighter"><div class="bar"><div class="tools"><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;ViewSource&#39;,this);return false;">view plain</a><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;CopyToClipboard&#39;,this);return false;">copy to clipboard</a><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;PrintSource&#39;,this);return false;">print</a><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;About&#39;,this);return false;">?</a></div></div><ol start="1" class="dp-j"><li class="alt"><span><span>PrimeFaces.locales[</span><span class="string">'pt_BR'</span><span>] = { &nbsp;&nbsp;</span></span></li></ol></div><textarea name="code" class="java" cols="60" rows="10" style="display: none;">PrimeFaces.locales['pt_BR'] = { </textarea> que é o definido no seu código.<br> <br> Pode adicionar num arquivo js e importar o arquivo no xhtml. Assim poderá chamar em qualquer arquivo.<br> <br> 
+							</span>
+
+							<!-- Attachments -->
+
+								
+								<p><i><span class="gensmall">This message was edited 1 time. Last update was at 10/01/2012 11:44:53</span></i></p>
+						</td>
+					</tr>
+
+		
+					<tr> 
+						<td class="row2" valign="bottom" nowrap="nowrap" height="28" width="100%">
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+	<td valign="middle" nowrap="nowrap"> 
+		<a href="http://www.guj.com.br/user/profile/48750.java" class="icon_profile"><img src="./locales_files/transp.gif" alt=""></a>
+		<a href="http://www.guj.com.br/pm/sendTo/48750.java" class="icon_pm"><img src="./locales_files/transp.gif" alt=""></a>
+
+		
+		
+
+		
+		
+	</td>
+
+</tr>
+</tbody></table>						</td>
+					</tr>
+		
+					<tr>
+						<td class="spacerow" colspan="2" height="1"><img src="./locales_files/spacer.gif" alt="" width="1" height="1"></td>
+					</tr>
+					
+					
+	
+					<tr>
+						<td colspan="2">
+<div class="postinfo">
+	<div class="date">
+				<a href="http://www.guj.com.br/prepost/262520/1372072/respondido-calendar-em-portugues-no-primefaces-3"><img src="./locales_files/icon_minipost_new.gif" alt="[Post New]"></a>10/01/2012 11:48:19
+	</div>
+	<div class="subject">&nbsp;&nbsp; &nbsp;<b>Assunto:</b> <a name="1372072">[RESPONDIDO] calendar em português no Primefaces 3</a></div>
+	<div class="action">
+
+			<a href="http://www.guj.com.br/posts/quote/0/1372072.java" rel="nofollow" class="icon_quote"><img src="./locales_files/transp.gif" alt=""></a>
+
+
+
+		<a class="nav" href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#top"><img src="./locales_files/icon_up.gif" alt="[Up]"></a>
+	</div>
+</div>						</td>
+					</tr>
+
+					<tr>
+						<!-- Username -->
+
+
+						<td class="row1" valign="top" align="left" rowspan="2">
+<span class="genmed"><b>karinacomk.lima</b></span>
+<br>
+
+<span class="gensmall">
+	JavaTeenager
+	<br>
+
+<br> 
+
+	Membro desde: 07/08/2010 10:34:34<br>
+	Mensagens: 169
+<br>
+
+
+
+		<span class="offline">Offline </span>
+</span>
+<br>						</td>
+		
+						<!-- Message -->
+						<td class="row1" valign="top" id="post_text_1372072">
+							<span class="postbody">
+									Vlwww deu certo!!
+							</span>
+
+							<!-- Attachments -->
+
+						</td>
+					</tr>
+
+		
+					<tr> 
+						<td class="row1" valign="bottom" nowrap="nowrap" height="28" width="100%">
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+	<td valign="middle" nowrap="nowrap"> 
+		<a href="http://www.guj.com.br/user/profile/116436.java" class="icon_profile"><img src="./locales_files/transp.gif" alt=""></a>
+		<a href="http://www.guj.com.br/pm/sendTo/116436.java" class="icon_pm"><img src="./locales_files/transp.gif" alt=""></a>
+
+		
+		
+
+		
+		
+	</td>
+
+</tr>
+</tbody></table>						</td>
+					</tr>
+		
+					<tr>
+						<td class="spacerow" colspan="2" height="1"><img src="./locales_files/spacer.gif" alt="" width="1" height="1"></td>
+					</tr>
+					
+					
+	
+					<tr>
+						<td colspan="2">
+<div class="postinfo">
+	<div class="date">
+				<a href="http://www.guj.com.br/prepost/262520/1372089/respondido-calendar-em-portugues-no-primefaces-3"><img src="./locales_files/icon_minipost_new.gif" alt="[Post New]"></a>10/01/2012 12:12:09
+	</div>
+	<div class="subject">&nbsp;&nbsp; &nbsp;<b>Assunto:</b> <a name="1372089">Re:[RESPONDIDO] calendar em português no Primefaces 3</a></div>
+	<div class="action">
+
+			<a href="http://www.guj.com.br/posts/quote/0/1372089.java" rel="nofollow" class="icon_quote"><img src="./locales_files/transp.gif" alt=""></a>
+
+
+
+		<a class="nav" href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#top"><img src="./locales_files/icon_up.gif" alt="[Up]"></a>
+	</div>
+</div>						</td>
+					</tr>
+
+					<tr>
+						<!-- Username -->
+
+
+						<td class="row2" valign="top" align="left" rowspan="3">
+<span class="genmed"><b>fabiozanardi</b></span>
+<br>
+
+<span class="gensmall">
+	JavaEvangelist
+	<br>
+
+		<img src="./locales_files/f77ad541b6b5bc48c47d814b95491fbd.jpg" border="0" alt="[Avatar]"><br>
+<br> 
+
+	Membro desde: 06/07/2005 16:07:36<br>
+	Mensagens: 349
+<br>
+
+	Localização: Rio Claro-SP
+	<br>
+
+
+		<span class="offline">Offline </span>
+</span>
+<br>						</td>
+		
+						<!-- Message -->
+						<td class="row2" valign="top" id="post_text_1372089">
+							<span class="postbody">
+									assim não funciona galera?
+<br> 
+<br> <div class="dp-highlighter"><div class="bar"><div class="tools"><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;ViewSource&#39;,this);return false;">view plain</a><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;CopyToClipboard&#39;,this);return false;">copy to clipboard</a><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;PrintSource&#39;,this);return false;">print</a><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;About&#39;,this);return false;">?</a></div></div><ol start="1" class="dp-j"><li class="alt"><span><span>&lt;p:calendar locale=</span><span class="string">"pt"</span><span> showButtonPanel=</span><span class="string">"true"</span><span> navigator=</span><span class="string">"true"</span><span>/&gt;&nbsp;&nbsp;</span></span></li></ol></div><textarea name="code" class="java" cols="60" rows="10" style="display: none;">&lt;p:calendar locale="pt" showButtonPanel="true" navigator="true"/&gt;
+</textarea>
+<br> 
+<br> ?
+							</span>
+
+							<!-- Attachments -->
+
+								
+								<p><i><span class="gensmall">This message was edited 2 times. Last update was at 10/01/2012 12:12:53</span></i></p>
+						</td>
+					</tr>
+
+						<tr>
+							<td colspan="2" class="row2" width="100%" height="28"><hr><span class="gensmall">Fábio Zanardi
+<br>Waio Soluções em TI</span></td>
+						</tr>
+		
+					<tr> 
+						<td class="row2" valign="bottom" nowrap="nowrap" height="28" width="100%">
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+	<td valign="middle" nowrap="nowrap"> 
+		<a href="http://www.guj.com.br/user/profile/7257.java" class="icon_profile"><img src="./locales_files/transp.gif" alt=""></a>
+		<a href="http://www.guj.com.br/pm/sendTo/7257.java" class="icon_pm"><img src="./locales_files/transp.gif" alt=""></a>
+
+		
+			<a href="http://www.waio.com.br/" target="_new"><img src="./locales_files/icon_www.gif" alt="[WWW]"></a>
+		
+
+		
+			<a href="http://www.guj.com.br/user/profile/7257.java"><img src="./locales_files/icon_msnm.gif" alt="[MSN]"></a>
+		
+			<a href="http://wwp.icq.com/scripts/search.dll?to=43576211"><img src="./locales_files/icon_icq_add.gif" alt="[ICQ]"></a>
+	</td>
+
+</tr>
+</tbody></table>						</td>
+					</tr>
+		
+					<tr>
+						<td class="spacerow" colspan="2" height="1"><img src="./locales_files/spacer.gif" alt="" width="1" height="1"></td>
+					</tr>
+					
+					
+	
+					<tr>
+						<td colspan="2">
+<div class="postinfo">
+	<div class="date">
+				<a href="http://www.guj.com.br/prepost/262520/1372090/respondido-calendar-em-portugues-no-primefaces-3"><img src="./locales_files/icon_minipost_new.gif" alt="[Post New]"></a>10/01/2012 12:13:14
+	</div>
+	<div class="subject">&nbsp;&nbsp; &nbsp;<b>Assunto:</b> <a name="1372090">Re:[RESPONDIDO] calendar em português no Primefaces 3</a></div>
+	<div class="action">
+
+			<a href="http://www.guj.com.br/posts/quote/0/1372090.java" rel="nofollow" class="icon_quote"><img src="./locales_files/transp.gif" alt=""></a>
+
+
+
+		<a class="nav" href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#top"><img src="./locales_files/icon_up.gif" alt="[Up]"></a>
+	</div>
+</div>						</td>
+					</tr>
+
+					<tr>
+						<!-- Username -->
+
+
+						<td class="row1" valign="top" align="left" rowspan="2">
+<span class="genmed"><b>karinacomk.lima</b></span>
+<br>
+
+<span class="gensmall">
+	JavaTeenager
+	<br>
+
+<br> 
+
+	Membro desde: 07/08/2010 10:34:34<br>
+	Mensagens: 169
+<br>
+
+
+
+		<span class="offline">Offline </span>
+</span>
+<br>						</td>
+		
+						<!-- Message -->
+						<td class="row1" valign="top" id="post_text_1372090">
+							<span class="postbody">
+									Usando a versão mais nova do primefaces não funcionou...
+							</span>
+
+							<!-- Attachments -->
+
+						</td>
+					</tr>
+
+		
+					<tr> 
+						<td class="row1" valign="bottom" nowrap="nowrap" height="28" width="100%">
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+	<td valign="middle" nowrap="nowrap"> 
+		<a href="http://www.guj.com.br/user/profile/116436.java" class="icon_profile"><img src="./locales_files/transp.gif" alt=""></a>
+		<a href="http://www.guj.com.br/pm/sendTo/116436.java" class="icon_pm"><img src="./locales_files/transp.gif" alt=""></a>
+
+		
+		
+
+		
+		
+	</td>
+
+</tr>
+</tbody></table>						</td>
+					</tr>
+		
+					<tr>
+						<td class="spacerow" colspan="2" height="1"><img src="./locales_files/spacer.gif" alt="" width="1" height="1"></td>
+					</tr>
+					
+					
+	
+					<tr>
+						<td colspan="2">
+<div class="postinfo">
+	<div class="date">
+				<a href="http://www.guj.com.br/prepost/262520/1372110/respondido-calendar-em-portugues-no-primefaces-3"><img src="./locales_files/icon_minipost_new.gif" alt="[Post New]"></a>10/01/2012 12:36:36
+	</div>
+	<div class="subject">&nbsp;&nbsp; &nbsp;<b>Assunto:</b> <a name="1372110">Re:[RESPONDIDO] calendar em português no Primefaces 3</a></div>
+	<div class="action">
+
+			<a href="http://www.guj.com.br/posts/quote/0/1372110.java" rel="nofollow" class="icon_quote"><img src="./locales_files/transp.gif" alt=""></a>
+
+
+
+		<a class="nav" href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#top"><img src="./locales_files/icon_up.gif" alt="[Up]"></a>
+	</div>
+</div>						</td>
+					</tr>
+
+					<tr>
+						<!-- Username -->
+
+
+						<td class="row2" valign="top" align="left" rowspan="3">
+<span class="genmed"><b>fabiozanardi</b></span>
+<br>
+
+<span class="gensmall">
+	JavaEvangelist
+	<br>
+
+		<img src="./locales_files/f77ad541b6b5bc48c47d814b95491fbd.jpg" border="0" alt="[Avatar]"><br>
+<br> 
+
+	Membro desde: 06/07/2005 16:07:36<br>
+	Mensagens: 349
+<br>
+
+	Localização: Rio Claro-SP
+	<br>
+
+
+		<span class="offline">Offline </span>
+</span>
+<br>						</td>
+		
+						<!-- Message -->
+						<td class="row2" valign="top" id="post_text_1372110">
+							<span class="postbody">
+									mesmo colocando no facesconfig.xml :
+<br> 
+<br> <div class="dp-highlighter"><div class="bar"><div class="tools"><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;ViewSource&#39;,this);return false;">view plain</a><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;CopyToClipboard&#39;,this);return false;">copy to clipboard</a><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;PrintSource&#39;,this);return false;">print</a><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;About&#39;,this);return false;">?</a></div></div><ol start="1" class="dp-j"><li class="alt"><span><span>&lt;application&gt;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;locale-config&gt;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="keyword">default</span><span>-locale&gt;pt_BR&lt;/</span><span class="keyword">default</span><span>-locale&gt;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;supported-locale&gt;pt&lt;/supported-locale&gt;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;supported-locale&gt;en_US&lt;/supported-locale&gt;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/locale-config&gt;&nbsp;&nbsp;</span></li><li class="alt"><span>&lt;/application&gt;&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="java" cols="60" rows="10" style="display: none;">	&lt;application&gt;
+		&lt;locale-config&gt;
+			&lt;default-locale&gt;pt_BR&lt;/default-locale&gt;
+                        &lt;supported-locale&gt;pt&lt;/supported-locale&gt;
+			&lt;supported-locale&gt;en_US&lt;/supported-locale&gt;
+		&lt;/locale-config&gt;
+	&lt;/application&gt;
+
+</textarea>
+<br> 
+<br> ?
+							</span>
+
+							<!-- Attachments -->
+
+						</td>
+					</tr>
+
+						<tr>
+							<td colspan="2" class="row2" width="100%" height="28"><hr><span class="gensmall">Fábio Zanardi
+<br>Waio Soluções em TI</span></td>
+						</tr>
+		
+					<tr> 
+						<td class="row2" valign="bottom" nowrap="nowrap" height="28" width="100%">
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+	<td valign="middle" nowrap="nowrap"> 
+		<a href="http://www.guj.com.br/user/profile/7257.java" class="icon_profile"><img src="./locales_files/transp.gif" alt=""></a>
+		<a href="http://www.guj.com.br/pm/sendTo/7257.java" class="icon_pm"><img src="./locales_files/transp.gif" alt=""></a>
+
+		
+			<a href="http://www.waio.com.br/" target="_new"><img src="./locales_files/icon_www.gif" alt="[WWW]"></a>
+		
+
+		
+			<a href="http://www.guj.com.br/user/profile/7257.java"><img src="./locales_files/icon_msnm.gif" alt="[MSN]"></a>
+		
+			<a href="http://wwp.icq.com/scripts/search.dll?to=43576211"><img src="./locales_files/icon_icq_add.gif" alt="[ICQ]"></a>
+	</td>
+
+</tr>
+</tbody></table>						</td>
+					</tr>
+		
+					<tr>
+						<td class="spacerow" colspan="2" height="1"><img src="./locales_files/spacer.gif" alt="" width="1" height="1"></td>
+					</tr>
+					
+					
+	
+					<tr>
+						<td colspan="2">
+<div class="postinfo">
+	<div class="date">
+				<a href="http://www.guj.com.br/prepost/262520/1372123/respondido-calendar-em-portugues-no-primefaces-3"><img src="./locales_files/icon_minipost_new.gif" alt="[Post New]"></a>10/01/2012 12:43:53
+	</div>
+	<div class="subject">&nbsp;&nbsp; &nbsp;<b>Assunto:</b> <a name="1372123">Re:[RESPONDIDO] calendar em português no Primefaces 3</a></div>
+	<div class="action">
+
+			<a href="http://www.guj.com.br/posts/quote/0/1372123.java" rel="nofollow" class="icon_quote"><img src="./locales_files/transp.gif" alt=""></a>
+
+
+
+		<a class="nav" href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#top"><img src="./locales_files/icon_up.gif" alt="[Up]"></a>
+	</div>
+</div>						</td>
+					</tr>
+
+					<tr>
+						<!-- Username -->
+
+
+						<td class="row1" valign="top" align="left" rowspan="2">
+<span class="genmed"><b>karinacomk.lima</b></span>
+<br>
+
+<span class="gensmall">
+	JavaTeenager
+	<br>
+
+<br> 
+
+	Membro desde: 07/08/2010 10:34:34<br>
+	Mensagens: 169
+<br>
+
+
+
+		<span class="offline">Offline </span>
+</span>
+<br>						</td>
+		
+						<!-- Message -->
+						<td class="row1" valign="top" id="post_text_1372123">
+							<span class="postbody">
+									eu testei aqui e não foi...to usando o prime 3
+							</span>
+
+							<!-- Attachments -->
+
+						</td>
+					</tr>
+
+		
+					<tr> 
+						<td class="row1" valign="bottom" nowrap="nowrap" height="28" width="100%">
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+	<td valign="middle" nowrap="nowrap"> 
+		<a href="http://www.guj.com.br/user/profile/116436.java" class="icon_profile"><img src="./locales_files/transp.gif" alt=""></a>
+		<a href="http://www.guj.com.br/pm/sendTo/116436.java" class="icon_pm"><img src="./locales_files/transp.gif" alt=""></a>
+
+		
+		
+
+		
+		
+	</td>
+
+</tr>
+</tbody></table>						</td>
+					</tr>
+		
+					<tr>
+						<td class="spacerow" colspan="2" height="1"><img src="./locales_files/spacer.gif" alt="" width="1" height="1"></td>
+					</tr>
+					
+					
+	
+					<tr>
+						<td colspan="2">
+<div class="postinfo">
+	<div class="date">
+				<a href="http://www.guj.com.br/prepost/262520/1372126/respondido-calendar-em-portugues-no-primefaces-3"><img src="./locales_files/icon_minipost_new.gif" alt="[Post New]"></a>10/01/2012 12:44:19
+	</div>
+	<div class="subject">&nbsp;&nbsp; &nbsp;<b>Assunto:</b> <a name="1372126">Re:[RESPONDIDO] calendar em português no Primefaces 3</a></div>
+	<div class="action">
+
+			<a href="http://www.guj.com.br/posts/quote/0/1372126.java" rel="nofollow" class="icon_quote"><img src="./locales_files/transp.gif" alt=""></a>
+
+
+
+		<a class="nav" href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#top"><img src="./locales_files/icon_up.gif" alt="[Up]"></a>
+	</div>
+</div>						</td>
+					</tr>
+
+					<tr>
+						<!-- Username -->
+
+
+						<td class="row2" valign="top" align="left" rowspan="3">
+<span class="genmed"><b>fabiozanardi</b></span>
+<br>
+
+<span class="gensmall">
+	JavaEvangelist
+	<br>
+
+		<img src="./locales_files/f77ad541b6b5bc48c47d814b95491fbd.jpg" border="0" alt="[Avatar]"><br>
+<br> 
+
+	Membro desde: 06/07/2005 16:07:36<br>
+	Mensagens: 349
+<br>
+
+	Localização: Rio Claro-SP
+	<br>
+
+
+		<span class="offline">Offline </span>
+</span>
+<br>						</td>
+		
+						<!-- Message -->
+						<td class="row2" valign="top" id="post_text_1372126">
+							<span class="postbody">
+									realmente precisa dos locales, segue abaixo o link com a solução para todos locales, vale a pena salvar
+<br> 
+<br> <a class="snap_shots" href="http://www.primefaces.org:8090/display/Components/PrimeFaces+Locales" target="_new" rel="nofollow">Veja aqui nesse link: </a><a class="snap_shots" href="http://www.primefaces.org/" target="_blank" rel="nofollow">http://www.primefaces.org</a>
+							</span>
+
+							<!-- Attachments -->
+
+						</td>
+					</tr>
+
+						<tr>
+							<td colspan="2" class="row2" width="100%" height="28"><hr><span class="gensmall">Fábio Zanardi
+<br>Waio Soluções em TI</span></td>
+						</tr>
+		
+					<tr> 
+						<td class="row2" valign="bottom" nowrap="nowrap" height="28" width="100%">
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+	<td valign="middle" nowrap="nowrap"> 
+		<a href="http://www.guj.com.br/user/profile/7257.java" class="icon_profile"><img src="./locales_files/transp.gif" alt=""></a>
+		<a href="http://www.guj.com.br/pm/sendTo/7257.java" class="icon_pm"><img src="./locales_files/transp.gif" alt=""></a>
+
+		
+			<a href="http://www.waio.com.br/" target="_new"><img src="./locales_files/icon_www.gif" alt="[WWW]"></a>
+		
+
+		
+			<a href="http://www.guj.com.br/user/profile/7257.java"><img src="./locales_files/icon_msnm.gif" alt="[MSN]"></a>
+		
+			<a href="http://wwp.icq.com/scripts/search.dll?to=43576211"><img src="./locales_files/icon_icq_add.gif" alt="[ICQ]"></a>
+	</td>
+
+</tr>
+</tbody></table>						</td>
+					</tr>
+		
+					<tr>
+						<td class="spacerow" colspan="2" height="1"><img src="./locales_files/spacer.gif" alt="" width="1" height="1"></td>
+					</tr>
+					
+					
+	
+					<tr>
+						<td colspan="2">
+<div class="postinfo">
+	<div class="date">
+				<a href="http://www.guj.com.br/prepost/262520/1372137/respondido-calendar-em-portugues-no-primefaces-3"><img src="./locales_files/icon_minipost_new.gif" alt="[Post New]"></a>10/01/2012 12:49:22
+	</div>
+	<div class="subject">&nbsp;&nbsp; &nbsp;<b>Assunto:</b> <a name="1372137">Re:[RESPONDIDO] calendar em português no Primefaces 3</a></div>
+	<div class="action">
+
+			<a href="http://www.guj.com.br/posts/quote/0/1372137.java" rel="nofollow" class="icon_quote"><img src="./locales_files/transp.gif" alt=""></a>
+
+
+
+		<a class="nav" href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#top"><img src="./locales_files/icon_up.gif" alt="[Up]"></a>
+	</div>
+</div>						</td>
+					</tr>
+
+					<tr>
+						<!-- Username -->
+
+
+						<td class="row1" valign="top" align="left" rowspan="3">
+<span class="genmed"><b>fabiozanardi</b></span>
+<br>
+
+<span class="gensmall">
+	JavaEvangelist
+	<br>
+
+		<img src="./locales_files/f77ad541b6b5bc48c47d814b95491fbd.jpg" border="0" alt="[Avatar]"><br>
+<br> 
+
+	Membro desde: 06/07/2005 16:07:36<br>
+	Mensagens: 349
+<br>
+
+	Localização: Rio Claro-SP
+	<br>
+
+
+		<span class="offline">Offline </span>
+</span>
+<br>						</td>
+		
+						<!-- Message -->
+						<td class="row1" valign="top" id="post_text_1372137">
+							<span class="postbody">
+									eu fiz um teste aqui e funcionou perfeitamente apenas criando um arquivo locale-primefaces.js dentro da pasta WEB-INF/resources/js/ com os locales que vou utilizar,
+<br> ai no template ou na pagina jsf necessária voce chama:
+<br> 
+<br> <div class="dp-highlighter"><div class="bar"><div class="tools"><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;ViewSource&#39;,this);return false;">view plain</a><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;CopyToClipboard&#39;,this);return false;">copy to clipboard</a><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;PrintSource&#39;,this);return false;">print</a><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;About&#39;,this);return false;">?</a></div></div><ol start="1" class="dp-j"><li class="alt"><span><span>&lt;h:outputScript name=</span><span class="string">"locale-primefaces.js"</span><span> library=</span><span class="string">"js"</span><span> /&gt; &nbsp;&nbsp;</span></span></li></ol></div><textarea name="code" class="java" cols="60" rows="10" style="display: none;"> &lt;h:outputScript name="locale-primefaces.js" library="js" /&gt; </textarea>
+<br> 
+<br> e no calendar adiciona a tag  locale="pt_BR" ou o nome que voce deu ao locale como foi dito acima
+							</span>
+
+							<!-- Attachments -->
+
+								
+								<p><i><span class="gensmall">This message was edited 1 time. Last update was at 10/01/2012 13:06:31</span></i></p>
+						</td>
+					</tr>
+
+						<tr>
+							<td colspan="2" class="row1" width="100%" height="28"><hr><span class="gensmall">Fábio Zanardi
+<br>Waio Soluções em TI</span></td>
+						</tr>
+		
+					<tr> 
+						<td class="row1" valign="bottom" nowrap="nowrap" height="28" width="100%">
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+	<td valign="middle" nowrap="nowrap"> 
+		<a href="http://www.guj.com.br/user/profile/7257.java" class="icon_profile"><img src="./locales_files/transp.gif" alt=""></a>
+		<a href="http://www.guj.com.br/pm/sendTo/7257.java" class="icon_pm"><img src="./locales_files/transp.gif" alt=""></a>
+
+		
+			<a href="http://www.waio.com.br/" target="_new"><img src="./locales_files/icon_www.gif" alt="[WWW]"></a>
+		
+
+		
+			<a href="http://www.guj.com.br/user/profile/7257.java"><img src="./locales_files/icon_msnm.gif" alt="[MSN]"></a>
+		
+			<a href="http://wwp.icq.com/scripts/search.dll?to=43576211"><img src="./locales_files/icon_icq_add.gif" alt="[ICQ]"></a>
+	</td>
+
+</tr>
+</tbody></table>						</td>
+					</tr>
+		
+					<tr>
+						<td class="spacerow" colspan="2" height="1"><img src="./locales_files/spacer.gif" alt="" width="1" height="1"></td>
+					</tr>
+					
+					
+	
+					<tr>
+						<td colspan="2">
+<div class="postinfo">
+	<div class="date">
+				<a href="http://www.guj.com.br/prepost/262520/1372167/respondido-calendar-em-portugues-no-primefaces-3"><img src="./locales_files/icon_minipost_new.gif" alt="[Post New]"></a>10/01/2012 13:09:45
+	</div>
+	<div class="subject">&nbsp;&nbsp; &nbsp;<b>Assunto:</b> <a name="1372167">Re:[RESPONDIDO] calendar em português no Primefaces 3</a></div>
+	<div class="action">
+
+			<a href="http://www.guj.com.br/posts/quote/0/1372167.java" rel="nofollow" class="icon_quote"><img src="./locales_files/transp.gif" alt=""></a>
+
+
+
+		<a class="nav" href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#top"><img src="./locales_files/icon_up.gif" alt="[Up]"></a>
+	</div>
+</div>						</td>
+					</tr>
+
+					<tr>
+						<!-- Username -->
+
+
+						<td class="row2" valign="top" align="left" rowspan="2">
+<span class="genmed"><b>karinacomk.lima</b></span>
+<br>
+
+<span class="gensmall">
+	JavaTeenager
+	<br>
+
+<br> 
+
+	Membro desde: 07/08/2010 10:34:34<br>
+	Mensagens: 169
+<br>
+
+
+
+		<span class="offline">Offline </span>
+</span>
+<br>						</td>
+		
+						<!-- Message -->
+						<td class="row2" valign="top" id="post_text_1372167">
+							<span class="postbody">
+									Foi assim que eu fiz e funfouu usando o *.js que o 'edudebom ' postou!
+<br> 
+<br> Obrigada a todos!
+							</span>
+
+							<!-- Attachments -->
+
+						</td>
+					</tr>
+
+		
+					<tr> 
+						<td class="row2" valign="bottom" nowrap="nowrap" height="28" width="100%">
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+	<td valign="middle" nowrap="nowrap"> 
+		<a href="http://www.guj.com.br/user/profile/116436.java" class="icon_profile"><img src="./locales_files/transp.gif" alt=""></a>
+		<a href="http://www.guj.com.br/pm/sendTo/116436.java" class="icon_pm"><img src="./locales_files/transp.gif" alt=""></a>
+
+		
+		
+
+		
+		
+	</td>
+
+</tr>
+</tbody></table>						</td>
+					</tr>
+		
+					<tr>
+						<td class="spacerow" colspan="2" height="1"><img src="./locales_files/spacer.gif" alt="" width="1" height="1"></td>
+					</tr>
+					
+					
+	
+					<tr>
+						<td colspan="2">
+<div class="postinfo">
+	<div class="date">
+				<a href="http://www.guj.com.br/prepost/262520/1385535/respondido-calendar-em-portugues-no-primefaces-3"><img src="./locales_files/icon_minipost_new.gif" alt="[Post New]"></a>07/02/2012 14:33:39
+	</div>
+	<div class="subject">&nbsp;&nbsp; &nbsp;<b>Assunto:</b> <a name="1385535">Re:[RESPONDIDO] calendar em português no Primefaces 3</a></div>
+	<div class="action">
+
+			<a href="http://www.guj.com.br/posts/quote/0/1385535.java" rel="nofollow" class="icon_quote"><img src="./locales_files/transp.gif" alt=""></a>
+
+
+
+		<a class="nav" href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#top"><img src="./locales_files/icon_up.gif" alt="[Up]"></a>
+	</div>
+</div>						</td>
+					</tr>
+
+					<tr>
+						<!-- Username -->
+
+
+						<td class="row1" valign="top" align="left" rowspan="2">
+<span class="genmed"><b>cybernet</b></span>
+<br>
+
+<span class="gensmall">
+	Entusiasta Java
+	<br>
+
+<br> 
+
+	Membro desde: 17/08/2006 08:38:14<br>
+	Mensagens: 23
+<br>
+
+
+
+		<span class="offline">Offline </span>
+</span>
+<br>						</td>
+		
+						<!-- Message -->
+						<td class="row1" valign="top" id="post_text_1385535">
+							<span class="postbody">
+									Tentei fazer isso, mas não fica em portugues meu calendar, estou usando o primefaces 3.1, tem alguma configuração extra a se fazer?
+<br> 
+<br> No meu template eu coloquei essa linha no h:head
+<br> 
+<br> 	&lt;h:outputScript name="library/js/locales.js" library="js"&gt;&lt;/h:outputScript&gt;
+<br> 
+<br> nesse script está o conteúdo que o edudebom colocou
+<br> 
+<br> estou com a seguinte estrutura de diretorios:
+<br> 
+<br> <div class="dp-highlighter"><div class="bar"><div class="tools"><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;ViewSource&#39;,this);return false;">view plain</a><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;CopyToClipboard&#39;,this);return false;">copy to clipboard</a><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;PrintSource&#39;,this);return false;">print</a><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;About&#39;,this);return false;">?</a></div></div><ol start="1" class="dp-j"><li class="alt"><span><span>WebContent&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| -- template.xhtml&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| -- library&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- js&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--locales.js&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- css&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- images&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--META-INF&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--WEB-INF&nbsp;&nbsp;</span></li></ol></div><textarea name="code" class="java" cols="60" rows="10" style="display: none;">WebContent
+      | -- template.xhtml
+      |
+      | -- library
+                 |-- js
+                      |--locales.js
+                 |-- css
+                 |-- images
+      |--META-INF
+      |--WEB-INF
+</textarea>
+<br> 
+<br> Não sei se vai dar pra entender direito a estrutura, mas basicamente é isso
+<br> 
+<br> Já o meu calendar está assim:
+<br> 
+<br> <div class="dp-highlighter"><div class="bar"><div class="tools"><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;ViewSource&#39;,this);return false;">view plain</a><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;CopyToClipboard&#39;,this);return false;">copy to clipboard</a><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;PrintSource&#39;,this);return false;">print</a><a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#" onclick="dp.sh.Toolbar.Command(&#39;About&#39;,this);return false;">?</a></div></div><ol start="1" class="dp-j"><li class="alt"><span><span>&lt;p:calendar value=</span><span class="string">"#{pessoaBean.pessoa.dataNascimento}"</span><span> &nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=<span class="string">"campo-dtNascimento"</span><span> &nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;showOn=<span class="string">"button"</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pattern=<span class="string">"dd/MM/yyyy"</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;locale=<span class="string">"pt_BR"</span><span>/&gt;&nbsp;&nbsp;</span></span></li></ol></div><textarea name="code" class="java" cols="60" rows="10" style="display: none;">&lt;p:calendar value="#{pessoaBean.pessoa.dataNascimento}" 
+				id="campo-dtNascimento" 
+				showOn="button"
+				pattern="dd/MM/yyyy"
+				locale="pt_BR"/&gt;
+</textarea>
+<br> 
+<br> Agradeço a ajuda desde já
+							</span>
+
+							<!-- Attachments -->
+
+						</td>
+					</tr>
+
+		
+					<tr> 
+						<td class="row1" valign="bottom" nowrap="nowrap" height="28" width="100%">
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+	<td valign="middle" nowrap="nowrap"> 
+		<a href="http://www.guj.com.br/user/profile/12475.java" class="icon_profile"><img src="./locales_files/transp.gif" alt=""></a>
+		<a href="http://www.guj.com.br/pm/sendTo/12475.java" class="icon_pm"><img src="./locales_files/transp.gif" alt=""></a>
+
+		
+		
+
+		
+		
+	</td>
+
+</tr>
+</tbody></table>						</td>
+					</tr>
+		
+					<tr>
+						<td class="spacerow" colspan="2" height="1"><img src="./locales_files/spacer.gif" alt="" width="1" height="1"></td>
+					</tr>
+					
+					
+	
+					<tr>
+						<td colspan="2">
+<div class="postinfo">
+	<div class="date">
+				<a href="http://www.guj.com.br/prepost/262520/1385691/respondido-calendar-em-portugues-no-primefaces-3"><img src="./locales_files/icon_minipost_new.gif" alt="[Post New]"></a>07/02/2012 22:02:22
+	</div>
+	<div class="subject">&nbsp;&nbsp; &nbsp;<b>Assunto:</b> <a name="1385691">Re:[RESPONDIDO] calendar em português no Primefaces 3</a></div>
+	<div class="action">
+
+			<a href="http://www.guj.com.br/posts/quote/0/1385691.java" rel="nofollow" class="icon_quote"><img src="./locales_files/transp.gif" alt=""></a>
+
+
+
+		<a class="nav" href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#top"><img src="./locales_files/icon_up.gif" alt="[Up]"></a>
+	</div>
+</div>						</td>
+					</tr>
+
+					<tr>
+						<!-- Username -->
+
+
+						<td class="row2" valign="top" align="left" rowspan="3">
+<span class="genmed"><b>AnjoVingador</b></span>
+<br>
+
+<span class="gensmall">
+	JavaChild
+	<br>
+
+		<img src="./locales_files/3e19981534db9ff487a0c1b459472ffe.jpg" border="0" alt="[Avatar]"><br>
+<br> 
+
+	Membro desde: 01/11/2010 09:05:09<br>
+	Mensagens: 120
+<br>
+
+
+
+		<span class="offline">Offline </span>
+</span>
+<br>						</td>
+		
+						<!-- Message -->
+						<td class="row2" valign="top" id="post_text_1385691">
+							<span class="postbody">
+									Aproveitando o tópico...
+<br> É só comigo ou o ícone do p:calendar não está mais aparecendo direito?
+<br> E no lugar aparece um ícone estranho que não tem nada a ver com um calendário.
+<br> Está acontecendo com alguém?
+<br> Isso aconteceu comigo na versão 3.1, na 3.0.1 está normal.
+							</span>
+
+							<!-- Attachments -->
+
+						</td>
+					</tr>
+
+						<tr>
+							<td colspan="2" class="row2" width="100%" height="28"><hr><span class="gensmall">Bacharel em Ciência da Computação
+<br>Oracle Certified Professional, Java SE 6 Programmer </span></td>
+						</tr>
+		
+					<tr> 
+						<td class="row2" valign="bottom" nowrap="nowrap" height="28" width="100%">
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+	<td valign="middle" nowrap="nowrap"> 
+		<a href="http://www.guj.com.br/user/profile/120617.java" class="icon_profile"><img src="./locales_files/transp.gif" alt=""></a>
+		<a href="http://www.guj.com.br/pm/sendTo/120617.java" class="icon_pm"><img src="./locales_files/transp.gif" alt=""></a>
+
+		
+		
+
+		
+		
+	</td>
+
+</tr>
+</tbody></table>						</td>
+					</tr>
+		
+					<tr>
+						<td class="spacerow" colspan="2" height="1"><img src="./locales_files/spacer.gif" alt="" width="1" height="1"></td>
+					</tr>
+					
+					
+	
+					<tr>
+						<td colspan="2">
+<div class="postinfo">
+	<div class="date">
+				<a href="http://www.guj.com.br/prepost/262520/1385719/respondido-calendar-em-portugues-no-primefaces-3"><img src="./locales_files/icon_minipost_new.gif" alt="[Post New]"></a>08/02/2012 06:05:40
+	</div>
+	<div class="subject">&nbsp;&nbsp; &nbsp;<b>Assunto:</b> <a name="1385719">Re:[RESPONDIDO] calendar em português no Primefaces 3</a></div>
+	<div class="action">
+
+			<a href="http://www.guj.com.br/posts/quote/0/1385719.java" rel="nofollow" class="icon_quote"><img src="./locales_files/transp.gif" alt=""></a>
+
+
+
+		<a class="nav" href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#top"><img src="./locales_files/icon_up.gif" alt="[Up]"></a>
+	</div>
+</div>						</td>
+					</tr>
+
+					<tr>
+						<!-- Username -->
+
+
+						<td class="row1" valign="top" align="left" rowspan="2">
+<span class="genmed"><b>cybernet</b></span>
+<br>
+
+<span class="gensmall">
+	Entusiasta Java
+	<br>
+
+<br> 
+
+	Membro desde: 17/08/2006 08:38:14<br>
+	Mensagens: 23
+<br>
+
+
+
+		<span class="offline">Offline </span>
+</span>
+<br>						</td>
+		
+						<!-- Message -->
+						<td class="row1" valign="top" id="post_text_1385719">
+							<span class="postbody">
+									o meu também ta assim, aparece um icone grande, meio estranho.
+							</span>
+
+							<!-- Attachments -->
+
+						</td>
+					</tr>
+
+		
+					<tr> 
+						<td class="row1" valign="bottom" nowrap="nowrap" height="28" width="100%">
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+	<td valign="middle" nowrap="nowrap"> 
+		<a href="http://www.guj.com.br/user/profile/12475.java" class="icon_profile"><img src="./locales_files/transp.gif" alt=""></a>
+		<a href="http://www.guj.com.br/pm/sendTo/12475.java" class="icon_pm"><img src="./locales_files/transp.gif" alt=""></a>
+
+		
+		
+
+		
+		
+	</td>
+
+</tr>
+</tbody></table>						</td>
+					</tr>
+		
+					<tr>
+						<td class="spacerow" colspan="2" height="1"><img src="./locales_files/spacer.gif" alt="" width="1" height="1"></td>
+					</tr>
+					
+				<!-- END OF POST LISTING -->
+		
+				<tr align="center">
+					<td class="catbottom" colspan="2" height="28">
+						<table cellspacing="0" cellpadding="0" border="0">
+							<tbody><tr>
+								<td align="center"><span class="gensmall">&nbsp;</span></td>
+							</tr>
+						</tbody></table>
+					</td>
+				</tr>
+			</tbody></table>
+		
+			<table cellspacing="2" cellpadding="2" width="100%" align="center" border="0">
+				<tbody><tr>
+					<td width="8%" align="left" valign="bottom" nowrap="nowrap">
+							<a href="http://www.guj.com.br/posts/reply/0/262520.java" rel="nofollow" class="icon_reply nav"><img src="./locales_files/transp.gif" alt=""></a>
+					</td>
+					
+					<td valign="middle" align="left" colspan="0">
+						<span class="nav">
+						<a class="nav" href="http://www.guj.com.br/forums/list.java">Índice dos Fóruns </a> 
+            			» <a class="nav" href="http://www.guj.com.br/forums/show/6.java">Desenvolvimento Web </a>
+						</span>
+					</td>
+
+					<td valign="middle" align="right">		<div class="pagination">
+
+
+	<span class="current">1</span>
+
+	<a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3/2">2</a>
+
+			
+				<a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3/2">&#9658;</a>
+
+		<a href="http://www.guj.com.br/java/262520-respondido-calendar-em-portugues-no-primefaces-3#goto" onclick="return overlay(this, &#39;goToBox&#39;, &#39;rightbottom&#39;);">Ir</a>
+		<div id="goToBox">
+			<div class="title">Ir para a página...</div>
+			<div class="form">
+				<input type="text" style="width: 50px;" id="pageToGo">
+				<input type="button" value=" Ir " onclick="goToAnotherPage(2, 15, &#39;&#39;, &#39;posts&#39;, &#39;list&#39;, 262520, &#39;.java&#39;);">
+				<input type="button" value="Cancel" onclick="document.getElementById(&#39;goToBox&#39;).style.display = &#39;none&#39;;">
+			</div>
+		</div>
+
+		</div>
+</td>
+				</tr>
+			</tbody></table>
+			
+			<table width="100%" align="center">
+				
+				
+			</table>
+
+			<table cellspacing="0" cellpadding="0" width="100%" border="0">
+				<tbody><tr>
+					<td align="left" valign="top" class="gensmall">
+					</td>
+					<td align="right">	<table cellspacing="0" cellpadding="0" border="0">
+		<tbody><tr>			  
+			<td nowrap="nowrap">
+				<form action="" name="f" id="f" accept-charset="ISO-8859-1">
+					<span class="gensmall">Ir para:&nbsp;</span>
+					<select onchange="if(this.options[this.selectedIndex].value != -1){ document.location = &#39;/forums/show/&#39;+ this.options[this.selectedIndex].value +&#39;.java&#39;; }" name="select">
+						<option value="-1" selected="selected">Selecione um Fórum</option>				
+						
+                            <optgroup label="GUJ">
+		
+								<option value="17">Notícias</option>
+								<option value="2">Assuntos gerais necessariamente ligados a tecnologia</option>
+								<option value="25">MundoJ - Artigos, Notícias e Debates</option>
+								<option value="3">Artigos e Tutoriais</option>
+							
+                            </optgroup>
+                            <optgroup label="Java">
+		
+								<option value="4">Java Básico</option>
+								<option value="5">Java Avançado</option>
+								<option value="18">Ferramentas, Frameworks e Utilitários</option>
+								<option value="6">Desenvolvimento Web</option>
+								<option value="13">Interface Gráfica</option>
+								<option value="14">Google Android e Java Micro Edition (ME)</option>
+								<option value="11">Certificação Java</option>
+								<option value="22">Persistência: Hibernate, JPA, JDBC e outros</option>
+								<option value="7">Java Enterprise Edition (Java EE)</option>
+								<option value="23">Frameworks e Bibliotecas brasileiros</option>
+								<option value="24">RIA - Flex, JavaFX e outros</option>
+							
+                            </optgroup>
+                            <optgroup label="Engenharia">
+		
+								<option value="12">Arquitetura de Sistemas</option>
+								<option value="19">Metodologias de Desenvolvimento e Testes de Software</option>
+							
+                            </optgroup>
+                            <optgroup label="Outras Linguagens">
+		
+								<option value="26">JavaScript</option>
+								<option value="21">Ruby &amp; Ruby on Rails</option>
+								<option value="20">Outras Linguagens</option>
+							
+                            </optgroup>
+					</select>
+					&nbsp;
+					<input class="liteoption" type="button" value="Ir" onclick="if(document.f.select.options[document.f.select.selectedIndex].value != -1){ document.location = &#39;/forums/show/&#39;+ document.f.select.options[document.f.select.selectedIndex].value +&#39;.java&#39;; }">
+				</form>
+			</td>
+		</tr>
+	</tbody></table>
+</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+
+<a name="quick"></a>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	limitURLSize();
+
+});
+</script>
+
+			</td>
+			
+			
+		</tr>
+		
+		<tr>
+			<td align="center" colspan="2">
+				
+			</td>
+		</tr>
+	
+		<tr>
+			<td align="center" colspan="2">
+				<span class="copyright">Powered by <a class="copyright" href="http://www.jforum.net/" target="_blank">JForum 2.1.8</a> © <a class="copyright" href="http://www.jforum.net/team.jsp" target="_blank">JForum Team</a></span>
+			</td>
+		</tr>
+	</tbody></table>
+	<aside class="sidebar">
+		<div class="sidebar-item-header">
+			<h2 class="sidebar-item-title">
+				Notícias
+			</h2>
+		</div>
+		<ol class="rss-list">
+				<li class="rss-item">
+					<span class="rss-item-date">15/04/2014 -</span>
+					<h3 class="rss-item-title">
+						<a href="http://www.guj.com.br/noticias/178-join-community-2014---evento-em-goiania">Join Community 2014 - Evento em Goiânia</a>
+					</h3>
+				</li>
+				<li class="rss-item">
+					<span class="rss-item-date">14/04/2014 -</span>
+					<h3 class="rss-item-title">
+						<a href="http://www.guj.com.br/noticias/177-wildfly-810-cr1">WildFly 8.1.0 CR1</a>
+					</h3>
+				</li>
+				<li class="rss-item">
+					<span class="rss-item-date">10/04/2014 -</span>
+					<h3 class="rss-item-title">
+						<a href="http://www.guj.com.br/noticias/176-meetup-gratuito-de-mongodb-no-dia-254">MeetUp gratuito de MongoDB no dia 25/4</a>
+					</h3>
+				</li>
+				<li class="rss-item">
+					<span class="rss-item-date">08/04/2014 -</span>
+					<h3 class="rss-item-title">
+						<a href="http://www.guj.com.br/noticias/175-como-ir-ao-javaone-2014-na-faixa-0800-gratis">Como ir ao JavaOne 2014 na faixa, 0800, grátis!</a>
+					</h3>
+				</li>
+				<li class="rss-item">
+					<span class="rss-item-date">08/04/2014 -</span>
+					<h3 class="rss-item-title">
+						<a href="http://www.guj.com.br/noticias/174-versao-java-8-do-jogo-2048-com-javafx">Versão Java 8 do jogo 2048, com JavaFX</a>
+					</h3>
+				</li>
+		</ol>
+		<a class="more-rss" href="http://www.guj.com.br/noticias">Mais notícias...</a>
+
+		<div id="adSideBar" class="medium-ads"><a href="http://engine.adzerk.net/r?e=eyJhdiI6MzAyMjMsImF0Ijo1LCJjbSI6NDE2MzUsImNoIjoxMDY1MSwiY3IiOjExNTgyOSwiZGkiOiIzZmZhMWYxZjdiNzg0Y2NkYmE3Y2M4ZjkxMWIzMzk1NiIsImRtIjoxLCJmYyI6MTU3NjYwLCJmbCI6NzUwMjUsImt3IjoidW5kZWZpbmVkIiwibnciOjcxMjAsInBjIjowLCJwciI6MzE0NjgsInJ0IjoxLCJyZiI6Imh0dHBzOi8vd3d3Lmdvb2dsZS5jb20uYnIvIiwic3QiOjQ5MDQzLCJ1ayI6InVlMS0wZTAwNmI2OGVhZWM0MTgwYTExYWI1YjRkM2RjZTgwNyIsInRzIjoxMzk4MTMxNTU4MDUzLCJ1ciI6Imh0dHA6Ly93d3cuY2FzYWRvY29kaWdvLmNvbS5ici8_dXRtX3NvdXJjZT1HVUomdXRtX21lZGl1bT1iYW5uZXJfYXJyb2JhJnV0bV9jYW1wYWlnbj1zdGF0aWNfYXJyb2JhIn0&s=_Yjs9wL0RBHxaDb3iRLXl9F3tJI" rel="nofollow" target="_blank" title=""><img src="./locales_files/a60c5460d818453f9d81b878386006a3.png" title="" alt="" border="0" width="300" height="250"></a><img height="0px" width="0px" border="0" src="./locales_files/i(1).gif"></div>
+
+		<div class="sidebar-item-header">
+			<h2 class="sidebar-item-title">
+				Ofertas de Empregos
+			</h2>
+		</div>
+		<ol class="rss-list">
+				<li class="rss-item">
+					<span class="rss-item-date">16/04/2014 -</span>
+					<h3 class="rss-item-title">
+						<a href="http://www.ondetrabalhar.com/vagas/4314">Analista Programador iOS Junior</a>
+					</h3>
+				</li>
+				<li class="rss-item">
+					<span class="rss-item-date">16/04/2014 -</span>
+					<h3 class="rss-item-title">
+						<a href="http://www.ondetrabalhar.com/vagas/4313">Analista Programador Java Senior</a>
+					</h3>
+				</li>
+				<li class="rss-item">
+					<span class="rss-item-date">16/04/2014 -</span>
+					<h3 class="rss-item-title">
+						<a href="http://www.ondetrabalhar.com/vagas/4312">Desenvolvedor Ruby Jr</a>
+					</h3>
+				</li>
+				<li class="rss-item">
+					<span class="rss-item-date">15/04/2014 -</span>
+					<h3 class="rss-item-title">
+						<a href="http://www.ondetrabalhar.com/vagas/4311">Especialista em front-end PrimeFaces</a>
+					</h3>
+				</li>
+				<li class="rss-item">
+					<span class="rss-item-date">15/04/2014 -</span>
+					<h3 class="rss-item-title">
+						<a href="http://www.ondetrabalhar.com/vagas/4310">Analista em Ciclo de Desenvolvimento Seguro</a>
+					</h3>
+				</li>
+				<li class="rss-item">
+					<span class="rss-item-date">15/04/2014 -</span>
+					<h3 class="rss-item-title">
+						<a href="http://www.ondetrabalhar.com/vagas/4309">Desenvolvedor Ruby on Rails</a>
+					</h3>
+				</li>
+				<li class="rss-item">
+					<span class="rss-item-date">15/04/2014 -</span>
+					<h3 class="rss-item-title">
+						<a href="http://www.ondetrabalhar.com/vagas/4308">Analista de Help Desk Jr</a>
+					</h3>
+				</li>
+				<li class="rss-item">
+					<span class="rss-item-date">15/04/2014 -</span>
+					<h3 class="rss-item-title">
+						<a href="http://www.ondetrabalhar.com/vagas/4307">Analista Programador Pleno e Sênior (Dot Net)</a>
+					</h3>
+				</li>
+				<li class="rss-item">
+					<span class="rss-item-date">15/04/2014 -</span>
+					<h3 class="rss-item-title">
+						<a href="http://www.ondetrabalhar.com/vagas/4306">Analista de Sistemas Sênior (Tesouraria - 2 vagas)</a>
+					</h3>
+				</li>
+				<li class="rss-item">
+					<span class="rss-item-date">15/04/2014 -</span>
+					<h3 class="rss-item-title">
+						<a href="http://www.ondetrabalhar.com/vagas/4305">Analista de Sistemas Sênior</a>
+					</h3>
+				</li>
+				<li class="rss-item">
+					<span class="rss-item-date">15/04/2014 -</span>
+					<h3 class="rss-item-title">
+						<a href="http://www.ondetrabalhar.com/vagas/4304">Analista Programador Pleno (Oracle)</a>
+					</h3>
+				</li>
+				<li class="rss-item">
+					<span class="rss-item-date">15/04/2014 -</span>
+					<h3 class="rss-item-title">
+						<a href="http://www.ondetrabalhar.com/vagas/4303">Analista Programador Júnior (Mainframe)</a>
+					</h3>
+				</li>
+				<li class="rss-item">
+					<span class="rss-item-date">15/04/2014 -</span>
+					<h3 class="rss-item-title">
+						<a href="http://www.ondetrabalhar.com/vagas/4302">Arquiteto Funcional (Canais/ Especialista - Internet e Mobile e de Portais)</a>
+					</h3>
+				</li>
+				<li class="rss-item">
+					<span class="rss-item-date">15/04/2014 -</span>
+					<h3 class="rss-item-title">
+						<a href="http://www.ondetrabalhar.com/vagas/4301">Arquiteto Funcional Pleno (Canais)</a>
+					</h3>
+				</li>
+				<li class="rss-item">
+					<span class="rss-item-date">15/04/2014 -</span>
+					<h3 class="rss-item-title">
+						<a href="http://www.ondetrabalhar.com/vagas/4300">Analista Programador Pleno (.Net)</a>
+					</h3>
+				</li>
+		</ol>
+		<a class="more-rss" href="http://www.guj.com.br/jobs">Mais empregos...</a>
+
+	</aside>
+</div>		
+
+<!-- SyntaxHighlighter 1.5.1 -->
+<script type="text/javascript" src="./locales_files/shCore.js"></script>
+<script type="text/javascript" src="./locales_files/shBrushJava.js"></script>
+<script type="text/javascript" src="./locales_files/shBrushCpp.js"></script>
+<script type="text/javascript" src="./locales_files/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./locales_files/shBrushDelphi.js"></script>
+<script type="text/javascript" src="./locales_files/shBrushJScript.js"></script>
+<script type="text/javascript" src="./locales_files/shBrushPhp.js"></script>
+<script type="text/javascript" src="./locales_files/shBrushPython.js"></script>
+<script type="text/javascript" src="./locales_files/shBrushRuby.js"></script>
+<script type="text/javascript" src="./locales_files/shBrushSql.js"></script>
+<script type="text/javascript" src="./locales_files/shBrushVb.js"></script>
+<script type="text/javascript" src="./locales_files/shBrushXml.js"></script>
+<script type="text/javascript">
+<!--
+dp.sh.ClipboardSwf = '/templates/default/js/clipboard.swf';
+dp.sh.HighlightAll('code');
+-->
+</script>
+<iframe src="./locales_files/ping_session.htm" height="0" width="0" frameborder="0" scrolling="no"></iframe>
+<div class="footer">
+	<div class="container">
+		
+		<ul class="footer-list">
+			<li class="sponsor-box">
+				<a class="footer-logo first-logo" href="http://www.alura.com.br/">ALURA</a>
+				<ul class="footer-sub-list">
+					<li><a class="footer-link" href="http://www.alura.com.br/">Cursos online de tecnologia</a></li>
+				</ul>
+			</li>
+			<li class="sponsor-box">
+				<a class="footer-logo second-logo" href="http://www.caelum.com.br/">CAELUM</a>
+				<ul class="footer-sub-list">
+					<li><a class="footer-link" href="http://www.caelum.com.br/cursos/java/">Java</a></li>
+					<li><a class="footer-link" href="http://www.caelum.com.br/cursos/mobile/">Mobile</a></li>
+					<li><a class="footer-link" href="http://www.caelum.com.br/cursos/web/">Front-End</a></li>
+					<li><a class="footer-link" href="http://www.caelum.com.br/cursos/agile/">Agile</a></li>
+					<li><a class="footer-link" href="http://www.caelum.com.br/cursos/rails/">Rails</a></li>
+					<li><a class="footer-link" href="http://www.caelum.com.br/cursos/dotnet/">.NET</a></li>
+				</ul>
+			</li>
+			<li class="sponsor-box">
+				<a class="footer-logo third-logo" href="http://www.casadocodigo.com.br/">CASA DO C?DIGO</a>
+				<ul class="footer-sub-list">
+					<li><a class="footer-link" href="http://www.casadocodigo.com.br/">Conheça também os livros da Casa do Código</a></li>
+				</ul>
+			</li>
+		<!-- <li class="sponsor-box"><a class="footer-logo online-logo" href="#">Caelum Online</a></li> -->
+		</ul>
+	</div>
+	<div class="dark-footer">
+		<ol class="main-tags main-tags-first">
+<li><a class="main-tag" href="http://www.guj.com.br/tag/java">java</a></li>
+<li><a class="main-tag" href="http://www.guj.com.br/tag/android">android</a></li>
+<li><a class="main-tag" href="http://www.guj.com.br/tag/c%23">c#</a></li>
+<li><a class="main-tag" href="http://www.guj.com.br/tag/.net">.net</a></li>
+<li><a class="main-tag" href="http://www.guj.com.br/tag/javascript">javascript</a></li>
+<li><a class="main-tag" href="http://www.guj.com.br/tag/php">php</a></li>
+<li><a class="main-tag" href="http://www.guj.com.br/tag/jquery">jquery</a></li>
+<li><a class="main-tag" href="http://www.guj.com.br/tag/html">html</a></li>
+<li><a class="main-tag" href="http://www.guj.com.br/tag/sql">sql</a></li>		</ol>
+		<ol class="main-tags main-tags-second">
+			<li><a class="main-tag" href="http://www.lumpa.com.br/tag/photoshop">photoshop</a></li>
+			<li><a class="main-tag" href="http://www.lumpa.com.br/tag/illustrator">illustrator</a></li>
+			<li><a class="main-tag" href="http://www.lumpa.com.br/tag/inDesign">inDesign</a></li>
+			<li><a class="main-tag" href="http://www.lumpa.com.br/tag/tipografia">tipografia</a></li>
+			<li><a class="main-tag" href="http://www.lumpa.com.br/tag/vetoriza%C3%A7%C3%A3o">vetorização</a></li>
+		</ol>
+		<span class="footer-menu">
+			<span class="footer-menu-label">GUJ Respostas: </span>
+			
+			<a class="footer-link" href="http://www.guj.com.br/nao-resolvido">Não solucionadas</a>
+			<a class="footer-link" href="http://www.guj.com.br/sem-respostas">Sem respostas</a>
+		</span>
+		<span class="footer-menu">
+			<span class="footer-menu-label">GUJ Fórum: </span>
+			<a class="footer-link" href="http://www.guj.com.br/forums/list.java">Índice de Fóruns</a>
+			<a class="footer-link" href="http://www.guj.com.br/recentTopics/list.java">Tópicos Recentes</a>
+		</span>
+		<span class="footer-muted-message">Publicidade: guj@guj.com.br — Desenvolvido por <a class="footer-link" href="http://www.caelum.com.br/">Caelum</a> — GUJ: desde 2002</span>
+	</div>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="./locales_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-132222-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+
+
+</body></html>

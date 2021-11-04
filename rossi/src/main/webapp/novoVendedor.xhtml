@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="./tempInterno.xhtml"      
+                xmlns:f="http://java.sun.com/jsf/core">
+    <ui:define name="deck">
+        <h:panelGroup class="semBorda" >
+            <p:panelGrid  style="width: 100%;" columns="1" id="painel">
+                <f:facet name="header">  
+                    <h3>Cadastro de Vendedore(s)</h3>
+                </f:facet>
+            </p:panelGrid>
+        </h:panelGroup>
+    </ui:define>
+    <ui:define name="acao">
+        <h:panelGrid columns="2">
+            * Código: <p:inputText label="CodVendedor" value="#{vendedorMB.vendedor.vendCodigo}" required="true" readonly="true">
+                <f:convertNumber />
+            </p:inputText>
+            * Nome: <p:inputText label="Nome" value="#{vendedorMB.vendedor.vendNome}" required="true" />
+            * Telefone: <p:inputMask mask="(99)-9999-9999" label="TelefoneVendedor" value="#{vendedorMB.vendedor.vendTelefone}" required="true" />
+            * Celular: <p:inputMask  mask="(99)-9999-9999" label="CelularVendedor" value="#{vendedorMB.vendedor.vendCelular}" required="false" />
+            <p:commandButton value="Salvar" ajax="false" action="#{vendedorMB.salvaVendedor()}"/>
+            <h:panelGrid columns="3">
+                <p:commandButton value="Pesquisar" ajax="false" action="pesquisaVendedor" immediate="true" />
+                <p:commandButton value="Excluir" oncomplete="confirmationDialogExcluir.show()"/>
+                <p:commandButton value="Novo" ajax="false" action="#{vendedorMB.novoVendedor()}" icon="ui-icon-plus" style="margin-left: 0px" immediate="true" />
+                <h:form>
+                    <p:confirmDialog widgetVar="confirmationDialogExcluir" severity="alert"   
+                                     message="Deseja realmente excluir o registro #{vendedorMB.vendedor.vendCodigo}? "   
+                                     header="Excluir cadastro" appendToBody="true">
+                        <p:commandButton value="Sim, desejo"  action="#{vendedorMB.excluiVendedor()}" onclick="confirmationDialogExcluir.hide()"/>  
+                        <p:commandButton value="Não" onclick="confirmationDialogExcluir.hide()" />                                                       
+                    </p:confirmDialog>  
+                </h:form>
+            </h:panelGrid>
+        </h:panelGrid>
+    </ui:define>
+
+</ui:composition>

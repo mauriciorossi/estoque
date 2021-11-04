@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html   xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:p="http://primefaces.org/ui"
+        xmlns:ui="http://java.sun.com/jsf/facelets"
+        xmlns:f="http://java.sun.com/jsf/core"
+        >
+
+    <h:head> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href="./resources/css/default.css" rel="stylesheet" type="text/css"/>
+        <title>Faça o login:</title>
+    </h:head>
+    <h:body>
+        <form id="mensagens">  
+            <p:messages id="messages" showDetail="true" autoUpdate="true" closable="true" /> 
+        </form>
+        <center>
+        <h:form id="frm" prependId="false">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td id="header" align="center">
+                        <div id="logo">
+                            <h:commandLink action="index" immediate="true">
+                                <img src="resources/img/loja_Logo.png" border="0" width="100px"/>
+                            </h:commandLink>
+                        </div>
+                        <h1>Sistema de Controle de Estoque</h1>
+                    </td>
+                </tr>
+            </table>
+            <div id="login">
+            <h:panelGrid columns="2" cellpadding="5" >
+                <h:outputLabel for="usuario" value="Usuário:*" />  
+                <p:inputText id="usuario" 
+                             value="#{usuarioMB.usuario.usuario}" 
+                             required="true" 
+                             requiredMessage="Digite o seu usuário." 
+                             label="usuario"> 
+                </p:inputText>  
+                <h:outputLabel for="senha" value="Senha:*"/>
+                <p:password id="nonFeedback" required="true" 
+                            requiredMessage="Digite a sua senha."
+                            value="#{usuarioMB.usuario.senha}" /> 
+           <h:messages id="msgErro" style="color: red"/>
+            </h:panelGrid> 
+                <p:commandButton value="Entrar" id="btEntrar" action="#{usuarioMB.consultaUsuario()}" /> 
+            </div>    
+            
+        </h:form>
+       </center>
+    </h:body>
+</html>
+

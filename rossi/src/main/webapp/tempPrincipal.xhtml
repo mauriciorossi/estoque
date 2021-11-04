@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      >
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href="./resources/css/default.css" rel="stylesheet" type="text/css" />
+        <title>#{msg.titulo}</title>
+    </h:head>
+
+    <h:body>
+        <f:view>
+             <h:form id="frm" prependId="false">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td id="header" align="center">
+                            <div id="logo">
+                                <h:commandLink action="index" immediate="true">
+                                    <img src="resources/img/loja_Logo.png" border="0" width="100px"/>
+                                </h:commandLink>
+                            </div>
+                            <h1>Sistema de Controle de Estoque</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="menu">
+                            <p:menubar>
+                                <p:menuitem value="Início" ajax="false" action="index" immediate="true" icon="ui-icon-home" />
+                                <p:submenu label="Cadastros">  
+                                    <p:menuitem value="Produto(s)" action="novoProduto" immediate="true" icon="ui-icon-document" />  
+                                    <p:separator />  
+                                    <p:menuitem value="Cliente(s)" action="novoCliente" immediate="true" icon="ui-icon-document" />  
+                                    <p:separator />  
+                                    <p:menuitem value="Conserto(s)" action="novoConserto" immediate="true" icon="ui-icon-document" />  
+                                    <p:separator />  
+                                    <p:menuitem value="Pedido(s)" action="novoPedido" immediate="true" icon="ui-icon-document" />  
+                                    <p:separator />  
+                                    <p:menuitem value="Vendedora(s)" action="novoVendedor" immediate="true" icon="ui-icon-document" /> 
+                                    <p:separator />  
+                                    <p:menuitem value="Vale(s)" action="novoVale" immediate="true" icon="ui-icon-document" />  
+                                </p:submenu>  
+                                <p:submenu label="Consulta">  
+                                    <p:menuitem value="Produto(s)" ajax="false" action="pesquisaProduto" immediate="true" icon="ui-icon-search" />
+                                    <p:separator /> 
+                                    <p:menuitem value="Cliente(s)" action="pesquisaCliente" immediate="true" icon="ui-icon-search" />  
+                                    <p:separator /> 
+                                    <p:menuitem value="Conserto(s)" action="pesquisaConserto" immediate="true" icon="ui-icon-search" />  
+                                    <p:separator /> 
+                                    <p:menuitem value="Pedido(s)" action="pesquisaPedido" immediate="true" icon="ui-icon-search" />  
+                                    <p:separator /> 
+                                    <p:menuitem value="Vendedora(s)" action="pesquisaVendedor" immediate="true" icon="ui-icon-search" />  
+                                    <p:separator /> 
+                                    <p:menuitem value="Vale(s)" action="pesquisaVale" immediate="true" icon="ui-icon-search" />  
+                                </p:submenu>
+                                <p:submenu label="Vendas">  
+                                    <p:menuitem value="Nova" action="novaVenda" immediate="true" icon="ui-icon-document" />  
+                                    <p:separator />  
+                                    <p:menuitem value="Pesquisar" action="pesquisaVenda" immediate="true" icon="ui-icon-search" />  
+                                </p:submenu> 
+                                <p:submenu label="Etiquetas">  
+                                    <p:menuitem value="60 Etiquetas" action="#{etiquetasMB.geraEtiquetas}" ajax="false" immediate="true" icon="ui-icon-document-b" />  
+                                    <p:menuitem value="Excluir Etiquetas" action="#{etiquetasMB.excluiEtiquetas}" ajax="false" immediate="true" icon="ui-icon-document-b" />
+                                </p:submenu> 
+                                <p:submenu label="Relatório(s)">  
+                                    <p:menuitem value="Fechamento Diário" action="teste" immediate="true" icon="ui-icon-document-b" />  
+                                    <p:menuitem value="Por Data" action="relatorioData" immediate="true" icon="ui-icon-document-b" />  
+                                </p:submenu> 
+                                <p:menuitem value="Sair" ajax="false" url="/faces/index.xhtml" action="#{usuarioMB.mataSessao()}" icon="ui-icon-unlocked" />
+                            </p:menubar>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="conteudo">
+                            <p:messages autoUpdate="true" closable="true" />
+                            <ui:insert name="conteudo">Conteúdo</ui:insert>
+                        </td>
+                    </tr>
+                </table>
+          </h:form>
+
+            <p:dialog id="modalAjuda" header="Ajuda" widgetVar="ajuda" modal="true">
+                Aqui vem o texto...
+            </p:dialog>
+
+            <p:dialog id="modalGenerico" header="Ooops!" widgetVar="generico" modal="true">
+                Ação não implementada!
+            </p:dialog>
+
+            <p:dialog id="modalDialog" header="&copy; TargetTrust" widgetVar="copy" modal="true" width="300" height="300">  
+                <h:outputText value="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                              proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />  
+            </p:dialog>  
+
+        </f:view>
+    </h:body>
+
+</html>

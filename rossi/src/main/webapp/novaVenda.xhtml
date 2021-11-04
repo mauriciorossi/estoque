@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="./tempInterno.xhtml"
+                xmlns:f="http://java.sun.com/jsf/core">
+    <ui:define name="deck">
+        <h:panelGroup class="semBorda" >
+            <p:panelGrid  style="width: 100%;" columns="1" id="painel">
+                <f:facet name="header">  
+                    <h3>Cadastro de Venda(s)</h3>
+                </f:facet>
+            </p:panelGrid>
+        </h:panelGroup>
+    </ui:define>
+    <ui:define name="acao">
+        <h:outputScript library="js" name="locale-primefaces.js"/>  
+        <h:panelGrid columns="2">
+            * Código: <p:inputText label="Codigo" value="#{vendaMB.venda.vendaId}" required="true" readonly="true">
+                <f:convertNumber />
+            </p:inputText>
+            * Data: <p:calendar  locale="pt" label="Cliente" value="#{vendaMB.venda.vendaData}" required="true" />
+            * Cliente: <p:inputText label="Cliente" value="#{vendaMB.venda.clienteId}" required="true"/>
+            * Vendedora: <p:inputText label="Vendedora" value="#{vendaMB.venda.vendedoraId}" required="true"/>
+            * Produto: <p:inputText label="Produto" value="#{vendaMB.venda.produtoId}" required="true" />
+            * Total: <p:outputLabel value="#{vendaMB.venda.vendaValorTotal}"/>
+            * Forma de Pgto: <p:inputText label="pagamento" value="#{vendaMB.venda.vendaFormaPgto}" required="true" />
+            <p:commandButton value="Leitor" ajax="false" action="#{vendaMB.salvaVenda()}"/>
+            <p:commandButton value="Salvar" ajax="false" action="#{vendaMB.salvaVenda()}"/>
+            <h:panelGrid columns="3">
+                <p:commandButton value="Pesquisar" ajax="false" action="pesquisaVenda" immediate="true" />
+                <p:commandButton value="Excluir" oncomplete="confirmationDialogExcluir.show()"/>
+                <p:commandButton value="Novo" ajax="false" action="#{vendaMB.novaVenda()}" icon="ui-icon-plus" style="margin-left: 0px" immediate="true" /> <p:commandButton value="Novo" ajax="false" action="#{produtoMB.novoProduto()}" icon="ui-icon-plus" style="margin-left: 0px" immediate="true" />
+                <h:form>
+                    <p:confirmDialog widgetVar="confirmationDialogExcluir" severity="alert"   
+                                     message="Deseja realmente excluir o registro #{vendaMB.venda.vendaId}? "   
+                                     header="Excluir cadastro" appendToBody="true">
+                        <p:commandButton value="Sim, desejo"  action="#{vendaMB.excluiVenda()}" onclick="confirmationDialogExcluir.hide()"/>  
+                        <p:commandButton value="Não" onclick="confirmationDialogExcluir.hide()" />                                                       
+                    </p:confirmDialog>  
+                </h:form>
+            </h:panelGrid>
+        </h:panelGrid>
+    </ui:define>
+
+</ui:composition>
